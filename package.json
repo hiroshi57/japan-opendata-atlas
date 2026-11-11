@@ -1,0 +1,22 @@
+{
+  "name": "japan-opendata-atlas",
+  "version": "0.1.0",
+  "description": "日本のオープンデータ100選を2D/3Dで可視化するアトラス（左:項目 / 右:ビジュアル）",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "catalog": "python -I scripts/build_catalog.py",
+    "snapshots": "node scripts/fetch_snapshots.mjs",
+    "snapshots:py": "python -I scripts/fetch_snapshots.py",
+    "check:endpoints": "node scripts/check-endpoints.mjs"
+  },
+  "type": "module",
+  "dependencies": {
+    "maplibre-gl": "^6.17.0"
+  },
+  "devDependencies": {
+    "vite": "^8.3.7"
+  },
+  "private": true
+}

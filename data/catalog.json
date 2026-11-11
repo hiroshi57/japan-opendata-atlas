@@ -1,0 +1,1047 @@
+{
+ "source": "https://qiita.com/Retro-Maid/items/d99e436fe0b19e151709",
+ "excerpt_only": true,
+ "count": 100,
+ "items": [
+  {
+   "id": 1,
+   "name": "e-Govデータポータル",
+   "category": "横断データポータル・法令基盤",
+   "org": "デジタル庁",
+   "summary": "まずここから話を始めたいのが、中央省庁のオープンデータを一元的に検索・閲覧できるこのポータル。デジタル庁が運営していて、位置づけとしては「中央行政のオープンデータポータル」そのものなんですよね。人口・世帯、運輸・観光、教育・文化など12のカテゴリと、30以上の提供組織（各省庁）か…",
+   "url": "https://data.e-gov.go.jp/info/ja",
+   "license_urls": [
+    "https://www.e-gov.go.jp/info/ja/terms",
+    "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0"
+   ]
+  },
+  {
+   "id": 2,
+   "name": "e-Govデータポータル メタデータ取得API",
+   "category": "横断データポータル・法令基盤",
+   "org": "デジタル庁",
+   "summary": "前項のポータルをプログラムから叩きたくなったら、これ。e-Govデータポータルに登録されたデータセット・組織・タグ・リソースなどのメタデータを、会員登録不要で取得できるAPIです。ベースエンドポイントはhttps://data.e-gov.go.jp/data/api/actio…",
+   "url": "https://data.e-gov.go.jp/data/api_guide",
+   "license_urls": [
+    "https://www.e-gov.go.jp/info/ja/terms",
+    "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0"
+   ]
+  },
+  {
+   "id": 3,
+   "name": "e-Stat API",
+   "category": "統計・マクロ経済",
+   "org": "総務省統計局・独立行政法人統計センター",
+   "summary": "日本の統計オープンデータを扱うなら、まず避けて通れないのがこれ。政府統計の総合窓口（e-Stat）が保有する統計データを、機械判読可能な形式でプログラムから取得できるAPI機能です。国勢調査、労働力調査、家計調査、学校基本調査、犯罪統計など、各省庁が実施する基幹統計・一般統計を横…",
+   "url": "https://www.e-stat.go.jp/api/",
+   "license_urls": [
+    "https://www.e-stat.go.jp/terms-of-use"
+   ]
+  },
+  {
+   "id": 4,
+   "name": "統計LOD",
+   "category": "統計・マクロ経済",
+   "org": "総務省統計局・独立行政法人統計センター",
+   "summary": "同じe-Stat系でも、こちらはちょっと毛色が違います。政府統計をLinked Open Data（LOD）として、SPARQLクエリで検索・取得できるサービスです。統計表の数値や分類コードがRDF形式で構造化されていて、統計データ同士や外部のLODデータセットとの意味的な結びつ…",
+   "url": "https://data.e-stat.go.jp/lodw/sparqlendpoint",
+   "license_urls": [
+    "https://www.e-stat.go.jp/terms-of-use"
+   ]
+  },
+  {
+   "id": 5,
+   "name": "国勢調査データ",
+   "category": "統計・マクロ経済",
+   "org": "総務省統計局",
+   "summary": "5年に一度、日本国内に住む全ての人・世帯を対象に行われる国の基幹統計調査です。年齢別人口、世帯構成、就業状態、外国人住民の状況など、行政施策から民間の調査研究まで幅広く使われる日本最大級の基礎統計で、e-Stat上のこの検索ページだけでも8万件以上のファイルが登録されている、とい…",
+   "url": "https://www.e-stat.go.jp/stat-search/files?toukei=00200521",
+   "license_urls": [
+    "https://www.e-stat.go.jp/terms-of-use"
+   ]
+  },
+  {
+   "id": 6,
+   "name": "統計GIS・境界データ",
+   "category": "統計・マクロ経済",
+   "org": "総務省統計局・統計センター",
+   "summary": "統計データを地図上で可視化・分析したいときの定番がこれ。「統計地理情報システム」で、無料で使える地図分析ツール「jSTAT MAP」を中核に、小地域統計や地域メッシュ統計をダウンロードできる機能、そしてそれらの統計データと結合するための境界データ（GISファイル）のダウンロード機…",
+   "url": "https://www.e-stat.go.jp/gis",
+   "license_urls": [
+    "https://www.e-stat.go.jp/terms-of-use"
+   ]
+  },
+  {
+   "id": 7,
+   "name": "国土数値情報",
+   "category": "地図・GIS・位置情報・住所基盤",
+   "org": "国土交通省",
+   "summary": "ここからしばらく地図・GIS系が続きます。まずは国土数値情報。行政区域、鉄道、道路、公共施設、土地利用、災害リスクなど、国土に関する基礎的な情報を整備したGISデータ群で、GIS分析の土台としてほんとうによく使います。国土交通省が運営する「国土数値情報ダウンロードサイト」から、テ…",
+   "url": "https://nlftp.mlit.go.jp/ksj/",
+   "license_urls": [
+    "https://nlftp.mlit.go.jp/ksj/other/agreement.html"
+   ]
+  },
+  {
+   "id": 8,
+   "name": "位置参照情報",
+   "category": "地図・GIS・位置情報・住所基盤",
+   "org": "国土交通省",
+   "summary": "住所から座標を引きたい、いわゆるジオコーディングをやりたいとき、真っ先に候補に挙がるのがこれ。住所やそれに準ずる地名（街区、大字・町丁目）に対応する代表点の緯度経度座標を整備したデータです。「街区レベル位置参照情報」（都市計画区域の街区単位）と、その未整備地域を補完する「大字・町…",
+   "url": "https://nlftp.mlit.go.jp/isj/",
+   "license_urls": [
+    "https://nlftp.mlit.go.jp/ksj/other/agreement.html#agree-03"
+   ]
+  },
+  {
+   "id": 9,
+   "name": "基盤地図情報",
+   "category": "地図・GIS・位置情報・住所基盤",
+   "org": "国土地理院",
+   "summary": "地図を作る側の「基準」になるデータがこれ。道路縁、建物外周線、行政区画界、標高（数値標高モデル）など、地図作成の基礎となる位置情報を整備したデータです。地理空間情報活用推進基本法に基づいて、国土地理院が「基盤地図情報ダウンロードサービス」を通じて公開しています。",
+   "url": "https://service.gsi.go.jp/kiban/",
+   "license_urls": [
+    "https://service.gsi.go.jp/kiban/app/help/#terms_of_use"
+   ]
+  },
+  {
+   "id": 10,
+   "name": "地理院タイル",
+   "category": "地図・GIS・位置情報・住所基盤",
+   "org": "国土地理院",
+   "summary": "Web地図の背景を張りたいときの、ほぼ第一候補。標準地図、写真（オルソ画像）、標高タイル、土地条件図、治水地形分類図、災害情報など、国土地理院が保有する地図・空間情報をWeb地図用タイル形式で配信するサービスです。「地理院タイル一覧」ページに、配信中の全タイルの種類とURLテンプ…",
+   "url": "https://maps.gsi.go.jp/development/ichiran.html",
+   "license_urls": [
+    "https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html"
+   ]
+  },
+  {
+   "id": 11,
+   "name": "指定緊急避難場所・指定避難所データ",
+   "category": "気象・防災・地震・地盤",
+   "org": "国土地理院・各市町村（内閣府・消防庁とも連携）",
+   "summary": "防災系のデータに一歩踏み込むならこれ。各市町村が災害対策基本法に基づいて指定した「指定緊急避難場所」（洪水・崖崩れ・高潮・地震・津波・大規模な火事・内水氾濫・火山現象の8災害種別に対応）と「指定避難所」を、全国分まとめて地図化・データベース化した防災データです。",
+   "url": "https://www.gsi.go.jp/bousaichiri/hinanbasho.html",
+   "license_urls": [
+    "https://www.gsi.go.jp/GSI/chosaku.htm",
+    "https://www.gsi.go.jp/bousaichiri/hinanbasho-menseki.html"
+   ]
+  },
+  {
+   "id": 12,
+   "name": "PLATEAU 3D都市モデル",
+   "category": "不動産・都市計画",
+   "org": "国土交通省",
+   "summary": "ここからは不動産・都市計画寄りの話になります。まずは3Dで攻めたい人向けのPLATEAU。建物、道路、都市設備、土地利用などを高さ・形状情報付きの3Dデータとして整備した、都市デジタルツインの基盤データです。国土交通省のProject PLATEAUによって全国200以上の都市で…",
+   "url": "https://front.geospatial.jp/plateau_portal_site/",
+   "license_urls": [
+    "https://www.mlit.go.jp/plateau/site-policy/"
+   ]
+  },
+  {
+   "id": 13,
+   "name": "登記所備付地図データ",
+   "category": "不動産・都市計画",
+   "org": "法務省",
+   "summary": "地籍レベルの分析をやるなら要チェックなのがこれ。登記所に備え付けられている公図・地図（不動産登記法第14条地図）を電子化し、地図XMLフォーマットとして無償公開しているデータです。全国の地番・筆界ポリゴンを含み、法務省が抽出した最新時点の情報が「Ｇ空間情報センター」経由で提供され…",
+   "url": "https://www.moj.go.jp/MINJI/minji05_00494.html",
+   "license_urls": []
+  },
+  {
+   "id": 14,
+   "name": "登記所備付地図データ変換コンバータ mojxml2geojson",
+   "category": "不動産・都市計画",
+   "org": "デジタル庁",
+   "summary": "前項の地図XMLを実務に落とし込むときの、事実上の標準ツールがこれ。法務省が提供する登記所備付地図データ（地図XML／mojxml）を、GIS標準フォーマットであるGeoJSONに変換するPython製のオープンソースコンバータです。デジタル庁がGitHub上で公開していて、筆ポ…",
+   "url": "https://github.com/digital-go-jp/mojxml2geojson",
+   "license_urls": [
+    "https://github.com/digital-go-jp/mojxml2geojson/blob/main/LICENSE"
+   ]
+  },
+  {
+   "id": 15,
+   "name": "不動産情報ライブラリAPI",
+   "category": "不動産・都市計画",
+   "org": "国土交通省",
+   "summary": "不動産まわりのデータを一つの窓口で片付けたいなら、これが本命です。不動産取引価格・成約価格、地価公示・都道府県地価調査、鑑定評価書情報のほか、防災（ハザードマップ等）、都市計画、周辺施設、人口統計など30種類以上の不動産関連データをAPIで取得できる、国土交通省の統合プラットフォ…",
+   "url": "https://www.reinfolib.mlit.go.jp/",
+   "license_urls": [
+    "https://www.reinfolib.mlit.go.jp/help/termsOfUse/"
+   ]
+  },
+  {
+   "id": 16,
+   "name": "不動産取引価格情報",
+   "category": "不動産・都市計画",
+   "org": "国土交通省",
+   "summary": "「実際にいくらで売買されたのか」を知りたいときに効くのがこれ。全国の不動産（土地・建物・マンション等）について、アンケート調査に基づく実際の取引価格・成約価格を地点・時期別に取得できるデータです。不動産情報ライブラリのAPI群のうち「不動産価格（取引価格・成約価格）情報取得API…",
+   "url": "https://www.reinfolib.mlit.go.jp/help/apiManual/",
+   "license_urls": [
+    "https://www.reinfolib.mlit.go.jp/help/termsOfUse/"
+   ]
+  },
+  {
+   "id": 17,
+   "name": "地価公示・都道府県地価調査API",
+   "category": "不動産・都市計画",
+   "org": "国土交通省",
+   "summary": "前項が実勢価格なら、こちらは公的な「ものさし」の方。地価公示法に基づく「地価公示」および国土利用計画法に基づく「都道府県地価調査」の標準地・基準地について、所在地点・価格・前年変動率などを取得できるAPIです（不動産情報ライブラリ内のAPI番号XPT002）。実勢取引価格ではなく…",
+   "url": "https://www.reinfolib.mlit.go.jp/help/apiManual/xpt002/",
+   "license_urls": [
+    "https://www.reinfolib.mlit.go.jp/help/termsOfUse/"
+   ]
+  },
+  {
+   "id": 18,
+   "name": "気象庁 過去の気象データ・ダウンロード",
+   "category": "気象・防災・地震・地盤",
+   "org": "気象庁",
+   "summary": "ここから気象・防災系に戻ります。過去の観測値がまとまって欲しいときの定番がこれ。気象庁が全国の気象官署・アメダス観測所で観測してきた気温、降水量、風向風速、日照時間、湿度、積雪などの過去の観測データを、任意の地点・期間・観測項目を指定してダウンロードできるWebサービスです。デー…",
+   "url": "https://www.data.jma.go.jp/risk/obsdl/",
+   "license_urls": [
+    "https://www.jma.go.jp/jma/kishou/info/coment.html"
+   ]
+  },
+  {
+   "id": 19,
+   "name": "気象データ高度利用ポータル",
+   "category": "気象・防災・地震・地盤",
+   "org": "気象庁",
+   "summary": "気象データを自社システムやIoT・AIに組み込みたい開発者向けの入口がこれ。気象庁が保有する気象データを、企業のシステム開発やIoT・AI連携、防災アプリ等への活用を想定して、ビジネス・研究利用向けに整備した情報ポータルです。防災情報XML電文やアメダス観測データのCSV、数値予…",
+   "url": "https://www.data.jma.go.jp/developer/index.html",
+   "license_urls": [
+    "https://www.jma.go.jp/jma/kishou/info/coment.html"
+   ]
+  },
+  {
+   "id": 20,
+   "name": "気象庁 防災情報XML",
+   "category": "気象・防災・地震・地盤",
+   "org": "気象庁",
+   "summary": "速報性の高い防災情報を機械処理したいなら、これが本丸。気象警報・注意報、地震情報、津波情報、台風情報、火山情報などの防災気象情報を、機械可読なXML形式の電文として配信するサービスです。自然災害の軽減を目的に、行政機関や民間の防災システム、報道機関などが速報性の高い情報を自動処理…",
+   "url": "https://xml.kishou.go.jp/",
+   "license_urls": [
+    "https://www.jma.go.jp/jma/kishou/info/coment.html"
+   ]
+  },
+  {
+   "id": 21,
+   "name": "J-SHIS 地震ハザードステーション",
+   "category": "気象・防災・地震・地盤",
+   "org": "国立研究開発法人防災科学技術研究所（NIED）",
+   "summary": "J-SHISは、日本全国の地震ハザード情報を「共通情報基盤」として整備・公開しているサービスで、これ一つで確率論的地震動予測地図、地形・地盤分類250mメッシュ、震源断層モデル、液状化履歴地図、関東・東海地方の深部地盤構造モデルあたりまで一通り触れます。個人的に便利だと思うのが、…",
+   "url": "https://www.j-shis.bosai.go.jp/",
+   "license_urls": [
+    "https://www.j-shis.bosai.go.jp/agreement"
+   ]
+  },
+  {
+   "id": 22,
+   "name": "交通事故統計情報のオープンデータ",
+   "category": "治安・安全",
+   "org": "警察庁",
+   "summary": "警察庁が「世界最先端デジタル国家創造宣言」に基づいて整備・公開している、全国の交通事故発生情報のオープンデータです。事故が発生した地点の座標、発生日時、天候、路面状況、道路形状、当事者情報などが1件ごとのレコードとしてCSVで落とせるので、事故多発地点の分析やハザードマップ作成、…",
+   "url": "https://www.npa.go.jp/publications/statistics/koutsuu/opendata/index_opendata.html",
+   "license_urls": [
+    "https://www.npa.go.jp/rules/index.html"
+   ]
+  },
+  {
+   "id": 23,
+   "name": "犯罪統計",
+   "category": "治安・安全",
+   "org": "警察庁（政府統計ポータル e-Stat経由で公開）",
+   "summary": "犯罪統計資料は、犯罪統計規則に基づいて全国の都道府県警察から報告された情報をもとに警察庁が作る治安統計で、政府統計ポータルサイトe-Stat経由で公開されています。刑法犯・特別法犯の認知件数、検挙件数、検挙人員などを、全国および都道府県別、月別・年別で集計してあって、しかも200…",
+   "url": "https://www.e-stat.go.jp/stat-search/files?toukei=00130001",
+   "license_urls": [
+    "https://www.e-stat.go.jp/terms-of-use"
+   ]
+  },
+  {
+   "id": 24,
+   "name": "医療情報ネットのオープンデータ",
+   "category": "医療・健康",
+   "org": "厚生労働省",
+   "summary": "厚生労働省が運営する医療情報ネット（ナビイ）に登録されている、病院・診療所・歯科診療所・助産所・薬局などの医療機関基本情報をオープンデータ化したものです。施設名称、所在地、標榜診療科、診療時間などが入っています。",
+   "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/newpage_43373.html",
+   "license_urls": [
+    "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0"
+   ]
+  },
+  {
+   "id": 25,
+   "name": "NDBオープンデータ",
+   "category": "医療・健康",
+   "org": "厚生労働省",
+   "summary": "厚生労働省が管理するNDB（レセプト情報・特定健診等情報データベース）をもとに作られた医療統計の基本集計表です。都道府県別・年齢階級別の傷病名別レセプト件数や、特定健診・特定保健指導の実施状況などが毎年公表されています。あくまで集計済みの表であって個票ではない、という点は最初に押…",
+   "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000177182.html",
+   "license_urls": [
+    "https://www.mhlw.go.jp/chosakuken/index.html"
+   ]
+  },
+  {
+   "id": 26,
+   "name": "法人番号公表サイト Web-API",
+   "category": "企業・法人・金融",
+   "org": "国税庁",
+   "summary": "国税庁が提供する法人番号公表サイトのAPIで、法人番号、商号または名称、本店所在地の「基本3情報」を検索・取得できます。バージョンによっては英語表記やフリガナ情報の取得にも対応しています。名寄せの軸として法人番号を使いたいときの一次ソースになります。",
+   "url": "https://www.houjin-bangou.nta.go.jp/webapi/",
+   "license_urls": [
+    "https://www.houjin-bangou.nta.go.jp/webapi/riyokiyaku.html"
+   ]
+  },
+  {
+   "id": 27,
+   "name": "適格請求書発行事業者公表システム Web-API",
+   "category": "企業・法人・金融",
+   "org": "国税庁",
+   "summary": "国税庁が提供する、インボイス制度（適格請求書等保存方式）の登録事業者情報を検索・取得できるAPIです。登録番号ごとの事業者名称、登録年月日、登録取消・失効情報などをシステム連携で取れます。",
+   "url": "https://www.invoice-kohyo.nta.go.jp/web-api/",
+   "license_urls": [
+    "https://www.invoice-kohyo.nta.go.jp/web-api/riyou_kiyaku.html"
+   ]
+  },
+  {
+   "id": 28,
+   "name": "gBizINFO",
+   "category": "企業・法人・金融",
+   "org": "経済産業省",
+   "summary": "経済産業省が運営する、法人番号を軸に国税庁・厚生労働省・特許庁・防衛省など複数省庁が持っている法人情報を統合して提供するプラットフォームです。500万社を超える法人の基本情報に加えて、補助金採択、届出・認定、調達（入札）実績、特許情報などが法人単位で紐づけて見られます。バラバラの…",
+   "url": "https://info.gbiz.go.jp/",
+   "license_urls": [
+    "https://help.info.gbiz.go.jp/hc/ja/articles/4999421139102",
+    "https://info.gbiz.go.jp/api-spec/document/policy.pdf"
+   ]
+  },
+  {
+   "id": 29,
+   "name": "EDINET API",
+   "category": "企業・法人・金融",
+   "org": "金融庁",
+   "summary": "金融庁が運営する開示書類閲覧システムEDINETのAPIで、有価証券報告書、四半期報告書、大量保有報告書、有価証券届出書など金融商品取引法に基づく開示書類をプログラムから取得できます。上場企業や大口出資ファンドの開示情報をほぼリアルタイムで拾いにいく用途で使われます。",
+   "url": "https://disclosure2dl.edinet-fsa.go.jp/guide/static/disclosure/WZEK0110.html",
+   "license_urls": [
+    "https://disclosure2dl.edinet-fsa.go.jp/guide/static/disclosure/WZEK0030.html"
+   ]
+  },
+  {
+   "id": 30,
+   "name": "統計ダッシュボード",
+   "category": "統計・マクロ経済",
+   "org": "総務省統計局",
+   "summary": "統計ダッシュボードは、人口・世帯、労働・賃金、農林水産業、鉱工業、商業、サービス、企業活動、家計、住宅・土地、教育、社会保障・衛生など17分野にわたる主要な統計指標を横断的に閲覧できる政府提供のポータルです。ここで一つ実務上大事な話をしておくと、かつて内閣府が提供していた地域経済…",
+   "url": "https://dashboard.e-stat.go.jp/",
+   "license_urls": [
+    "https://dashboard.e-stat.go.jp/",
+    "https://dashboard.e-stat.go.jp/static/terms",
+    "https://dashboard.e-stat.go.jp/static/sitePolicy"
+   ]
+  },
+  {
+   "id": 31,
+   "name": "調達ポータル 落札実績オープンデータ",
+   "category": "調達・入札",
+   "org": "デジタル庁・政府電子調達（GEPS）関連",
+   "summary": "政府電子調達システム（GEPS）に登録された、国の機関が発注した案件の落札実績をオープンデータとして提供するサービスです。平成25年度以降から直近までの落札結果をCSVで落とせるので、行政の調達動向や取引実績の分析に使えます。ひとつ落とし穴として、オープンカウンタ（少額）案件のう…",
+   "url": "https://www.p-portal.go.jp/pps-web-biz/UAB02/OAB0201",
+   "license_urls": [
+    "https://www.p-portal.go.jp/pps-web-biz/resources/app/html/sitepolicy.html"
+   ]
+  },
+  {
+   "id": 32,
+   "name": "官公需情報ポータルサイト検索API",
+   "category": "調達・入札",
+   "org": "中小企業庁",
+   "summary": "官公需情報ポータルサイトが持っている、国や独立行政法人などが発注する入札・調達（官公需）情報を検索できるREST APIです。中小企業が官公需案件を効率よく見つけられるように、外部システムからの自動取得を可能にしています。",
+   "url": "https://api-catalog.e-gov.go.jp/info/ja/apicatalog/view/67",
+   "license_urls": [
+    "https://api-catalog.e-gov.go.jp/info/ja/terms"
+   ]
+  },
+  {
+   "id": 33,
+   "name": "e-Gov法令API",
+   "category": "横断データポータル・法令基盤",
+   "org": "デジタル庁",
+   "summary": "e-Gov法令検索が提供する法令データをプログラムから取得できるAPIです。2025年3月にVersion 2として刷新され、法令の一覧取得、法令本文の取得、条文単位での構造化データ取得などができるようになりました。OpenAPI（Swagger）仕様で公開されているので、ブラウ…",
+   "url": "https://laws.e-gov.go.jp/api/2/swagger-ui",
+   "license_urls": [
+    "https://laws.e-gov.go.jp/terms/"
+   ]
+  },
+  {
+   "id": 34,
+   "name": "国立国会図書館サーチAPI",
+   "category": "文化財・研究・アーカイブ",
+   "org": "国立国会図書館",
+   "summary": "国立国会図書館サーチ（NDLサーチ）が横断的に集めている、図書・雑誌記事・論文・デジタル化資料などの書誌メタデータを外部から検索・取得できるAPI群です。検索用API（SRU、OpenSearch、OpenURL）とハーベスト用API（OAI-PMH）が用意されていて、目的に応じ…",
+   "url": "https://ndlsearch.ndl.go.jp/help/api",
+   "license_urls": [
+    "https://ndlsearch.ndl.go.jp/help/api/specifications",
+    "https://ndlsearch.ndl.go.jp/help/api/provider",
+    "https://ndlsearch.ndl.go.jp/help/sitepolicy#copyrights"
+   ]
+  },
+  {
+   "id": 35,
+   "name": "ジャパンサーチ",
+   "category": "文化財・研究・アーカイブ",
+   "org": "国立国会図書館ほか（内閣府知的財産戦略推進事務局、デジタルアーカイブジャパン推進委員会連携）",
+   "summary": "書籍、文化財、メディア芸術、地域アーカイブなど、日本各地の分野をまたいだデジタルアーカイブを統合的に横断検索できる国のプラットフォームです。多数の連携機関が持つメタデータを集約していて、テーマ・人物・時代といった切り口からも資料を探せます。",
+   "url": "https://jpsearch.go.jp/api",
+   "license_urls": [
+    "https://jpsearch.go.jp/policy"
+   ]
+  },
+  {
+   "id": 36,
+   "name": "CiNii Research API",
+   "category": "文化財・研究・アーカイブ",
+   "org": "国立情報学研究所（NII）",
+   "summary": "論文、研究データ、図書・雑誌、研究者、研究プロジェクトといった学術情報を横断的に検索できるCiNii Researchのデータを、プログラムから取れるAPI群です。OpenURL、OpenSearch、RDF、JSON-LD（ベータ版）の4形式に対応していて、他の学術システムとの…",
+   "url": "https://support.nii.ac.jp/ja/cinii/api/api_outline",
+   "license_urls": [
+    "https://support.nii.ac.jp/ja/cinii/terms",
+    "https://support.nii.ac.jp/ja/cinii/copyright"
+   ]
+  },
+  {
+   "id": 37,
+   "name": "KAKEN API",
+   "category": "文化財・研究・アーカイブ",
+   "org": "国立情報学研究所（NII）",
+   "summary": "文部科学省・日本学術振興会が交付する科学研究費助成事業（科研費）のデータベース「KAKEN」から、研究課題、研究者、研究成果の概要をOpenSearch形式で検索できるAPIです。研究課題を検索するAPIと、研究者を検索するAPIの2種類があります。",
+   "url": "https://support.nii.ac.jp/ja/kaken/api/api_outline",
+   "license_urls": [
+    "https://support.nii.ac.jp/ja/kaken/other/terms"
+   ]
+  },
+  {
+   "id": 38,
+   "name": "メディア芸術データベース",
+   "category": "文化財・研究・アーカイブ",
+   "org": "独立行政法人国立美術館 国立アートリサーチセンター（令和5年度に文化庁から事業を引き継ぎ運営）",
+   "summary": "マンガ、アニメーション、ゲーム、メディアアートといった日本のメディア芸術に関する作品情報・所蔵情報を横断的に収録したデータベースです。「MADB Lab」はこのデータベースをより広く二次利用できるように、データセット配布やクエリサービスを提供するサイト、という位置づけです。",
+   "url": "https://mediag.bunka.go.jp/madb_lab/",
+   "license_urls": [
+    "https://mediag.bunka.go.jp/madb_lab/user_terms",
+    "https://mediag.bunka.go.jp/madb_lab/privacy_policy"
+   ]
+  },
+  {
+   "id": 39,
+   "name": "自然環境情報GIS",
+   "category": "環境・農業・食品",
+   "org": "環境省 生物多様性センター",
+   "summary": "環境省生物多様性センターが実施してきた自然環境保全基礎調査などの成果を、地図形式で公開しているGISデータ群です。植生図、動植物分布調査、干潟・藻場・サンゴ礁分布、河川・湖沼の環境情報など、日本全国の自然環境に関する基礎的な調査結果を収録しています。特筆したいのが、1970年代か…",
+   "url": "https://www.biodic.go.jp/",
+   "license_urls": [
+    "https://www.biodic.go.jp/copyright/terms_of_service.html"
+   ]
+  },
+  {
+   "id": 40,
+   "name": "大気汚染常時監視データ",
+   "category": "環境・農業・食品",
+   "org": "国立環境研究所（環境展望台）・環境省関連",
+   "summary": "全国の大気汚染常時監視測定局が観測した、大気汚染物質の測定データを公開しているサービスです。国立環境研究所が運営する「環境展望台」上で提供されていて、都道府県・市区町村が設置した一般局・自排局に加え、国が設置した国設局のデータも含まれます。月間値・年間値のほか、2009年度以降は…",
+   "url": "https://tenbou.nies.go.jp/download/",
+   "license_urls": [
+    "https://www.nies.go.jp/sitepolicy.html"
+   ]
+  },
+  {
+   "id": 41,
+   "name": "環境アセスメントデータベース EADAS",
+   "category": "環境・農業・食品",
+   "org": "環境省",
+   "summary": "これは環境影響評価（いわゆる環境アセスメント）をやる事業者や自治体が、事業計画のかなり早い段階で「その土地の自然環境・社会環境ってどうなってるんだっけ」を掴むために整備されたWeb GISシステムなんですよね。全国環境情報に加えて、風力発電事業向けの鳥類センシティビティマップや、…",
+   "url": "https://eadas.env.go.jp/",
+   "license_urls": [
+    "https://www.env.go.jp/mail.html"
+   ]
+  },
+  {
+   "id": 42,
+   "name": "エネルギー消費統計調査",
+   "category": "統計・マクロ経済",
+   "org": "資源エネルギー庁・e-Stat",
+   "summary": "資源エネルギー庁がやっている、産業部門・業務部門・家庭部門などのエネルギー消費実態を掴むための統計調査です。政府統計の総合窓口（e-Stat）上で、調査計画の概要から統計表、時系列データまで公開されていて、エネルギー基本計画の策定や省エネ政策の評価に使われています。マクロなエネル…",
+   "url": "https://www.e-stat.go.jp/statistics/00551005",
+   "license_urls": [
+    "https://www.e-stat.go.jp/terms-of-use"
+   ]
+  },
+  {
+   "id": 43,
+   "name": "アドレス・ベース・レジストリ",
+   "category": "地図・GIS・位置情報・住所基盤",
+   "org": "デジタル庁",
+   "summary": "デジタル庁が整備を進めている、住所・所在地のベースレジストリです。日本の住所って、不動産登記法に基づく地番と、住居表示法に基づく住居表示という別々の体系が併存していて、これがデータ互換性の欠如やコストの重複を生んでいる——その解消を狙って、正確な町字データなどを段階的に公開してい…",
+   "url": "https://www.digital.go.jp/policies/base_registry_address",
+   "license_urls": [
+    "https://www.digital.go.jp/resources/open_data/public_data_license_v1.0"
+   ]
+  },
+  {
+   "id": 44,
+   "name": "郵便番号データ",
+   "category": "地図・GIS・位置情報・住所基盤",
+   "org": "日本郵便",
+   "summary": "説明不要かもしれませんが、日本郵便が出している、全国の郵便番号と住所（都道府県・市区町村・町域）の対応データです。標準形式・カナ表記版・ローマ字版・UTF-8形式など複数のフォーマットで提供されていて、2025年5月からは郵便番号・デジタルアドレスAPIによる無料提供も始まってい…",
+   "url": "https://www.post.japanpost.jp/service/search/zipcode/download/",
+   "license_urls": [
+    "https://www.post.japanpost.jp/service/search/zipcode/download/readme.html"
+   ]
+  },
+  {
+   "id": 45,
+   "name": "電子国土基本図 住居表示住所",
+   "category": "地図・GIS・位置情報・住所基盤",
+   "org": "国土地理院",
+   "summary": "国土地理院の電子国土基本図のうち、住居表示が実施されている地域の「基礎番号」（住居表示の付番に使う基準点）を収録した地名情報データです。街区符号や基礎番号といった、住居表示住所を特定するのに必要な位置情報を、市区町村・町名単位で提供しています。ジオコーディングの精度を突き詰めたい…",
+   "url": "https://www.gsi.go.jp/kihonjohochousa/jukyo_jusho.html",
+   "license_urls": [
+    "https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html"
+   ]
+  },
+  {
+   "id": 46,
+   "name": "東京都交通局オープンデータ",
+   "category": "交通・モビリティ",
+   "org": "東京都交通局・公共交通オープンデータセンター（ODPT）",
+   "summary": "都営地下鉄（浅草線・三田線・新宿線・大江戸線）と都営バスの運行データを、公共交通オープンデータセンターのCKANカタログ経由で公開しているものです。駅・バス停・路線情報から、列車位置情報やバスロケーションなどのリアルタイムデータまで揃っていて、交通系アプリや乗換案内サービスを作る…",
+   "url": "https://ckan.odpt.org/dataset?organization=toei",
+   "license_urls": [
+    "https://developer.odpt.org/ja/faq-info"
+   ]
+  },
+  {
+   "id": 47,
+   "name": "横浜市オープンデータポータル",
+   "category": "自治体オープンデータポータル",
+   "org": "横浜市",
+   "summary": "横浜市が持っている人口統計、公共施設、防災、行政手続きなどのデータを、CKANベースのポータルで一元的に公開しているサイトです。「データで見る横浜」というダッシュボード機能もあって、統計データを視覚的にサッと確認できるほか、組織別・カテゴリー別にデータセットを検索できます。",
+   "url": "https://data.city.yokohama.lg.jp/",
+   "license_urls": [
+    "https://data.city.yokohama.lg.jp/terms.html"
+   ]
+  },
+  {
+   "id": 48,
+   "name": "大阪府オープンデータカタログ",
+   "category": "自治体オープンデータポータル",
+   "org": "大阪府",
+   "summary": "大阪府のオープンデータを、CKANベースのカタログサイト（BODIK ODCS）で提供しているものです。人口・世帯、健康・福祉、教育・文化、防災、観光、行財政など10カテゴリーにわたって多数のデータセットが登録されていて、救急搬送支援システムデータや温泉施設一覧みたいな、府民生活…",
+   "url": "https://odcs.bodik.jp/270008/",
+   "license_urls": [
+    "https://odcs.bodik.jp/270008/tos/"
+   ]
+  },
+  {
+   "id": 49,
+   "name": "Project PLATEAU GitHub / 関連OSS",
+   "category": "OSS・開発ツール",
+   "org": "Project PLATEAU・国土交通省",
+   "summary": "国土交通省が進めている都市デジタルツインプロジェクト「Project PLATEAU」のGitHub組織で、3D都市モデル（CityGML）を扱うためのSDK、変換ツール、サンプルアプリなどのOSSがどっさり公開されています。代表的なところだと、Unity向けの「PLATEAU-…",
+   "url": "https://github.com/Project-PLATEAU",
+   "license_urls": []
+  },
+  {
+   "id": 50,
+   "name": "mojxml2geojson（登記所備付地図データ変換コンバータ）",
+   "category": "OSS・開発ツール",
+   "org": "デジタル庁",
+   "summary": "法務省が公開している登記所備付地図データ（Map XML形式、通称「モジ座標系XML」）を、汎用的な地理空間データ形式であるGeoJSONに変換するPython製のOSSツールです。地図XMLからポリゴン形状と属性情報だけを抜き出して、座標系を世界測地系（JGD2011）の経緯度…",
+   "url": "https://github.com/digital-go-jp/mojxml2geojson",
+   "license_urls": [
+    "https://github.com/digital-go-jp/mojxml2geojson/blob/main/LICENSE"
+   ]
+  },
+  {
+   "id": 51,
+   "name": "ガバメントAI「源内」OSS",
+   "category": "OSS・開発ツール",
+   "org": "デジタル庁",
+   "summary": "「源内」は、デジタル庁が開発・運用している政府職員向けの生成AI利活用基盤で、業務特化型の生成AIアプリを迅速かつ安全に使える環境を提供するものです。ベースはAWSが公開しているOSS「Generative AI Use Cases」で、そこにチーム管理機能、AIアプリ管理機能、…",
+   "url": "https://github.com/digital-go-jp/genai-web",
+   "license_urls": [
+    "https://github.com/digital-go-jp/genai-web/blob/main/LICENSE"
+   ]
+  },
+  {
+   "id": 52,
+   "name": "公共施設一覧",
+   "category": "自治体標準オープンデータセット（生活・施設情報）",
+   "org": "自治体・デジタル庁 自治体標準オープンデータセット",
+   "summary": "市役所・支所、図書館、公民館、体育館などの公共施設の名称・所在地・連絡先を網羅した施設マスタです。デジタル庁が公開する「自治体標準オープンデータセット」31項目のうちの1つで、施設系データの基本形にあたる「データ項目定義書A（スタンダード型）」の様式に沿って、各自治体が整備・公開…",
+   "url": "https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test",
+   "license_urls": []
+  },
+  {
+   "id": 53,
+   "name": "文化財一覧",
+   "category": "自治体標準オープンデータセット（生活・施設情報）",
+   "org": "自治体・デジタル庁 自治体標準オープンデータセット",
+   "summary": "地域内の国宝・重要文化財・史跡・名勝・天然記念物などの指定文化財を一覧化したデータセットです。自治体標準オープンデータセット31項目の一つで、文化財保護法に基づく指定区分や指定年月日など、文化財行政特有の属性を持つのが、公共施設一覧のような汎用施設データとの違いですね。",
+   "url": "https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test",
+   "license_urls": []
+  },
+  {
+   "id": 54,
+   "name": "地域・年齢別人口",
+   "category": "自治体標準オープンデータセット（生活・施設情報）",
+   "org": "自治体・デジタル庁 自治体標準オープンデータセット",
+   "summary": "町丁目や地区単位で集計した、年齢階級別・男女別の人口統計です。他の項目が「施設の一覧（点情報）」なのに対して、この項目は住民基本台帳等をもとにした「集計統計データ」で、31項目の中でもデータ構造が異質な部類に入ります。ここは扱いが変わるので意識しておくと良いです。",
+   "url": "https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test",
+   "license_urls": []
+  },
+  {
+   "id": 55,
+   "name": "子育て施設一覧",
+   "category": "自治体標準オープンデータセット（生活・施設情報）",
+   "org": "自治体・デジタル庁 自治体標準オープンデータセット",
+   "summary": "保育所、認定こども園、幼稚園、地域子育て支援拠点など、子育て世帯が利用する施設を横断的にまとめた一覧です。自治体標準オープンデータセット31項目のうち、子育て世帯支援を目的とする代表的な施設系データとして位置づけられています。",
+   "url": "https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test",
+   "license_urls": []
+  },
+  {
+   "id": 56,
+   "name": "公衆無線LANアクセスポイント一覧",
+   "category": "自治体標準オープンデータセット（生活・施設情報）",
+   "org": "自治体・デジタル庁 自治体標準オープンデータセット",
+   "summary": "自治体庁舎や観光施設、避難所などに設置された無料Wi-Fiスポット・公衆無線LANアクセスポイントの、設置場所と利用条件をまとめたデータセットです。訪日外国人観光客への対応や、災害時の通信手段確保を目的に整備されることが多く、情報通信インフラ系に分類されます。",
+   "url": "https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test",
+   "license_urls": []
+  },
+  {
+   "id": 57,
+   "name": "AED設置箇所一覧",
+   "category": "自治体標準オープンデータセット（生活・施設情報）",
+   "org": "自治体・デジタル庁 自治体標準オープンデータセット",
+   "summary": "自動体外式除細動器（AED）の設置場所、利用可能時間、設置施設の情報をまとめた、まさに命に関わる緊急対応系のデータセットです。自治体標準オープンデータセット31項目の中でも、公衆衛生・救急対応分野の代表的な項目として位置づけられています。",
+   "url": "https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test",
+   "license_urls": []
+  },
+  {
+   "id": 58,
+   "name": "介護サービス事業所一覧",
+   "category": "自治体標準オープンデータセット（生活・施設情報）",
+   "org": "自治体・デジタル庁 自治体標準オープンデータセット",
+   "summary": "訪問介護、通所介護（デイサービス）、施設サービスなど、介護保険法に基づき指定・登録された介護サービス事業所を一覧化したデータセットです。自治体標準オープンデータセット31項目のうち、高齢者福祉・介護分野を代表する項目で、事業所の指定情報という行政手続き特有の属性を含むのが特徴です…",
+   "url": "https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test",
+   "license_urls": []
+  },
+  {
+   "id": 59,
+   "name": "食品等営業許可・届出一覧",
+   "category": "自治体標準オープンデータセット（生活・施設情報）",
+   "org": "自治体・デジタル庁 自治体標準オープンデータセット",
+   "summary": "飲食店営業や食品製造業など、食品衛生法に基づき保健所が許可・届出を受理した事業者の情報を一覧化したデータセットです。自治体標準オープンデータセット31項目の中では、行政手続き（許認可）情報を扱う数少ない項目の一つで、有効期限管理という他項目にはない時間軸の属性を持っているのが個性…",
+   "url": "https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test",
+   "license_urls": []
+  },
+  {
+   "id": 60,
+   "name": "学校給食献立情報",
+   "category": "自治体標準オープンデータセット（生活・施設情報）",
+   "org": "自治体・デジタル庁 自治体標準オープンデータセット",
+   "summary": "公立小中学校で提供される給食の献立名、使用食材、栄養価、アレルゲン情報をまとめたデータセットです。自治体標準オープンデータセット31項目の中では唯一、日次で更新される「時系列コンテンツ系」データという性格を持っていて、他の施設一覧・統計データとは構造が大きく違います。ここは扱いを…",
+   "url": "https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test",
+   "license_urls": []
+  },
+  {
+   "id": 61,
+   "name": "小中学校通学区域情報",
+   "category": "自治体標準オープンデータセット（生活・施設情報）",
+   "org": "自治体・デジタル庁 自治体標準オープンデータセット",
+   "summary": "これは市区町村が指定する公立小中学校ごとの通学区域（いわゆる学区）の範囲を示すデータセットです。住所または町丁目単位で「この住所ならこの学校」という紐づけが整理されているので、就学時の学校指定や、引っ越し先の学区確認みたいなユースケースで効いてきます。",
+   "url": "https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test",
+   "license_urls": []
+  },
+  {
+   "id": 62,
+   "name": "消防水利施設一覧",
+   "category": "自治体標準オープンデータセット（生活・施設情報）",
+   "org": "自治体・デジタル庁 自治体標準オープンデータセット",
+   "summary": "消火活動に使う消火栓、防火水槽、それに河川・池といった自然水利まで含めた消防水利施設について、設置場所と種別を一覧化したデータセットです。火災発生時の消防隊の水利確保や、地域住民の防災意識向上のための情報公開を目的に整備されています。",
+   "url": "https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test",
+   "license_urls": []
+  },
+  {
+   "id": 63,
+   "name": "防災行政無線設置一覧",
+   "category": "自治体標準オープンデータセット（生活・施設情報）",
+   "org": "自治体・デジタル庁 自治体標準オープンデータセット",
+   "summary": "災害時に住民へ情報を伝える屋外拡声子局、要するに防災行政無線スピーカーの設置場所や設備仕様を一覧化したデータセットです。避難情報や緊急速報の到達範囲を可視化して、住民自身が最寄りの放送設備を把握できるようにする、というのが狙いです。ここで面白いのが、他の多くの項目と違って定義書D…",
+   "url": "https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test",
+   "license_urls": []
+  },
+  {
+   "id": 64,
+   "name": "公営駐車場一覧",
+   "category": "自治体標準オープンデータセット（生活・施設情報）",
+   "org": "自治体・デジタル庁 自治体標準オープンデータセット",
+   "summary": "自治体が設置・運営する公営駐車場について、所在地、収容台数、料金体系、営業時間などをまとめたデータセットです。観光客や来庁者が事前に駐車場の空き状況や料金を把握できるようにする、というのが整備の目的です。",
+   "url": "https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test",
+   "license_urls": []
+  },
+  {
+   "id": 65,
+   "name": "公営駐輪場一覧",
+   "category": "自治体標準オープンデータセット（生活・施設情報）",
+   "org": "自治体・デジタル庁 自治体標準オープンデータセット",
+   "summary": "自治体が管理する自転車・バイク用の公営駐輪場について、所在地、収容台数、利用料金（定期・一時利用）をまとめたデータセットです。放置自転車対策や、自転車通勤・通学者への情報提供が目的で、公営駐車場一覧と同じ共通表形式で整備されています。",
+   "url": "https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test",
+   "license_urls": []
+  },
+  {
+   "id": 66,
+   "name": "投票所一覧",
+   "category": "自治体標準オープンデータセット（生活・施設情報）",
+   "org": "自治体・デジタル庁 自治体標準オープンデータセット",
+   "summary": "国政選挙・地方選挙のときに開設される投票所について、所在地、施設名、対象となる投票区（住所範囲）をまとめたデータセットです。有権者が自分の投票先を簡単に確認できるようにする、というのが目的です。",
+   "url": "https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test",
+   "license_urls": []
+  },
+  {
+   "id": 67,
+   "name": "ごみの分別方法一覧",
+   "category": "自治体標準オープンデータセット（生活・施設情報）",
+   "org": "自治体・デジタル庁 自治体標準オープンデータセット",
+   "summary": "家庭ごみの品目ごとに、可燃・不燃・資源・粗大ごみなどの分別区分や出し方、注意点をまとめたデータセットです。住民のごみ出しルール確認の負担を減らして、ごみ分別アプリやチャットボットでの品目検索を可能にする、というのが狙いです。",
+   "url": "https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test",
+   "license_urls": []
+  },
+  {
+   "id": 68,
+   "name": "ごみ集積所一覧",
+   "category": "自治体標準オープンデータセット（生活・施設情報）",
+   "org": "自治体・デジタル庁 自治体標準オープンデータセット",
+   "summary": "家庭ごみを出す集積所（ごみステーション）の設置位置と、その集積所を使う対象世帯・町丁目の範囲をまとめたデータセットです。転入者が自分の使うべき集積所を把握できるようにすることや、収集ルート最適化への活用を目的としています。",
+   "url": "https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test",
+   "license_urls": []
+  },
+  {
+   "id": 69,
+   "name": "赤ちゃんの駅",
+   "category": "自治体標準オープンデータセット（生活・施設情報）",
+   "org": "自治体・デジタル庁 自治体標準オープンデータセット",
+   "summary": "授乳スペースやおむつ替え台を備えて、乳幼児連れの外出をサポートする「赤ちゃんの駅」認定施設（公共施設・商業施設等）の所在地や設備情報をまとめたデータセットです。子育て世帯の外出時の安心材料として整備されていて、これも防災行政無線設置一覧と同じく定義書D（データモデル型）に分類され…",
+   "url": "https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test",
+   "license_urls": []
+  },
+  {
+   "id": 70,
+   "name": "海しるAPI",
+   "category": "衛星・海洋",
+   "org": "海上保安庁",
+   "summary": "海しるAPIは、海上保安庁が運用する海洋状況表示システム「海しる（MSIL）」が持っている海洋情報を、外部システムから直接取れるようにしたWeb APIです。潮流や波浪、海上気象、船舶動静、海洋保護区みたいな多岐にわたる海洋関連レイヤーを、地図表示だけじゃなくてデータそのものとし…",
+   "url": "https://portal.msil.go.jp/",
+   "license_urls": [
+    "https://portal.msil.go.jp/agreement"
+   ]
+  },
+  {
+   "id": 71,
+   "name": "農地の区画情報 筆ポリゴン",
+   "category": "環境・農業・食品",
+   "org": "農林水産省",
+   "summary": "筆ポリゴンは、農林水産省統計部が耕地面積調査等の母集団情報として整備した、日本全国の農地一枚一枚の区画形状をポリゴンデータにして公開したものです。衛星画像や空中写真から区画境界を判読して作られていて、農業DXの圃場管理システムやスマート農業アプリのベースデータとして本当に広く使わ…",
+   "url": "https://www.maff.go.jp/j/tokei/porigon/",
+   "license_urls": []
+  },
+  {
+   "id": 72,
+   "name": "食品成分データベース",
+   "category": "環境・農業・食品",
+   "org": "文部科学省",
+   "summary": "食品成分データベースは、文部科学省が公表している「日本食品標準成分表」に基づいて、食品ごとのエネルギーやたんぱく質、ビタミン、ミネラルなどの栄養成分値を検索・閲覧できるWebシステムです。最新版は「日本食品標準成分表（八訂）増補2023年」に対応していて、栄養計算ソフトや献立作成…",
+   "url": "https://fooddb.mext.go.jp/",
+   "license_urls": []
+  },
+  {
+   "id": 73,
+   "name": "20万分の1日本シームレス地質図V2 Web API",
+   "category": "気象・防災・地震・地盤",
+   "org": "産業技術総合研究所 地質調査総合センター",
+   "summary": "このAPIは、産業技術総合研究所地質調査総合センターが作った全国20万分の1シームレス地質図の情報を、タイル画像・凡例・地質図データとしてプログラムから直接取得できるWebサービスです。地質図を自前のWebアプリや地図ライブラリ（Leaflet、OpenLayersなど）に組み込…",
+   "url": "https://gbank.gsj.jp/seamless/v2/api/1.2/",
+   "license_urls": [
+    "https://gbank.gsj.jp/seamless/agreement.html"
+   ]
+  },
+  {
+   "id": 74,
+   "name": "水文水質データベース",
+   "category": "気象・防災・地震・地盤",
+   "org": "国土交通省",
+   "summary": "水文水質データベースは、国土交通省水管理・国土保全局が所管する全国の観測所で取れた、雨量、水位、流量、水質、積雪深、ダム・堰の管理量といった多岐にわたる水文観測データを公開するシステムです。河川管理者や研究者だけじゃなく、防災アプリや水資源管理システムの基礎データとしても使われて…",
+   "url": "https://www1.river.go.jp/",
+   "license_urls": [
+    "https://www.mlit.go.jp/link.html"
+   ]
+  },
+  {
+   "id": 75,
+   "name": "全国道路・街路交通情勢調査 / 道路交通センサス",
+   "category": "交通・モビリティ",
+   "org": "国土交通省",
+   "summary": "道路交通センサスは、国土交通省、都道府県、政令指定都市、高速道路会社等が共同で実施する調査で、全国の道路について交通量、旅行速度、道路の混雑状況などを把握して、将来の道路計画・整備の基礎資料にすることを目的としています。おおむね5年おきに実施されていて、公開中の最新調査は令和3年…",
+   "url": "https://www.mlit.go.jp/road/census/r3/",
+   "license_urls": [
+    "https://www.mlit.go.jp/link.html",
+    "https://www.e-stat.go.jp/statistics/00600580"
+   ]
+  },
+  {
+   "id": 76,
+   "name": "JARTICオープンデータ",
+   "category": "交通・モビリティ",
+   "org": "日本道路交通情報センター（JARTIC）",
+   "summary": "JARTICオープンデータは、日本道路交通情報センターが国土交通省と連携して提供する交通関連情報のオープンデータサービスで、交通規制情報、断面交通量情報、交差点制御情報、直轄国道の交通量データなどを含みます。全国約2,600か所に設置された常設トラフィックカウンターや、CCTV映…",
+   "url": "https://www.jartic-open-traffic.org/",
+   "license_urls": []
+  },
+  {
+   "id": 77,
+   "name": "GTFS-JP",
+   "category": "交通・モビリティ",
+   "org": "国土交通省・各交通事業者",
+   "summary": "GTFS-JPは、世界標準の公共交通データ形式であるGTFS（General Transit Feed Specification）をベースに、国土交通省が2016年から日本のバス事業者向けに拡張・整備してきた標準データフォーマットです。バス事業者と交通情報の利用者（乗換案内アプ…",
+   "url": "https://www.gtfs.jp/",
+   "license_urls": [
+    "https://www.gtfs.jp/developpers-guide/distribution_guidelines.html"
+   ]
+  },
+  {
+   "id": 78,
+   "name": "公共交通オープンデータセンター",
+   "category": "交通・モビリティ",
+   "org": "公共交通オープンデータ協議会",
+   "summary": "公共交通オープンデータセンターは、鉄道、バス、フェリー、航空、シェアサイクルなど日本の公共交通に関するリアルタイム運行情報・静的データを一元的に提供するデータ基盤（ODPT）です。東京メトロをはじめとする多数の鉄道・バス事業者が参加していて、運行情報、駅・停留所情報、時刻表、遅延…",
+   "url": "https://www.odpt.org/",
+   "license_urls": [
+    "https://developer.odpt.org/terms/data_basic_license.html"
+   ]
+  },
+  {
+   "id": 79,
+   "name": "JAXA Earth API",
+   "category": "衛星・海洋",
+   "org": "JAXA（宇宙航空研究開発機構）",
+   "summary": "JAXA Earth APIは、JAXAが持っている複数の衛星観測データを、Python/JavaScriptから直接呼び出せる形で提供する衛星データ配信サービスです。陸面の数値標高モデルや森林マップ、降水量（月別・半月別・日別）、地表面温度、海面水温、クロロフィルa濃度、植生指…",
+   "url": "https://data.earth.jaxa.jp/ja/",
+   "license_urls": [
+    "https://earth.jaxa.jp/policy/"
+   ]
+  },
+  {
+   "id": 80,
+   "name": "気象庁 平年値データ",
+   "category": "気象・防災・地震・地盤",
+   "org": "気象庁",
+   "summary": "気象庁が提供する平年値データは、1991〜2020年の30年間の観測値をもとに算出された気候の基準値です。地上気象観測（気温・降水量など）、アメダス観測、高層気象観測、生物季節観測、梅雨入り・明けの時期、直達日射量、台風の発生数・接近数・上陸数の統計と、多岐にわたる気候要素を平年…",
+   "url": "https://www.data.jma.go.jp/stats/data/mdrr/normal/index.html",
+   "license_urls": [
+    "https://www.jma.go.jp/jma/kishou/info/coment.html"
+   ]
+  },
+  {
+   "id": 81,
+   "name": "気象庁 台風位置表",
+   "category": "気象・防災・地震・地盤",
+   "org": "気象庁",
+   "summary": "これ、台風の進路を扱うなら一度は見ておきたいやつなんですよね。平成13年（2001年）以降に発生した台風について、3時間ごとの中心位置・中心気圧・最大風速・暴風域や強風域の半径といった項目を一覧にした履歴データです。直近の台風まで随時更新され、年ごとにきれいに整理されているので、…",
+   "url": "https://www.data.jma.go.jp/typhoon/position_table/index.html",
+   "license_urls": [
+    "https://www.jma.go.jp/jma/kishou/info/coment.html"
+   ]
+  },
+  {
+   "id": 82,
+   "name": "気象庁 火山観測データ",
+   "category": "気象・防災・地震・地盤",
+   "org": "気象庁",
+   "summary": "全国の常時観測火山（北海道から九州まで約50火山）について、地震計・傾斜計・GNSS等による観測データや監視カメラ画像、火山活動解説資料をまとめて閲覧できるページです。火山ごとに個別ページが用意されていて、噴火警戒レベルや火山活動の状況把握に使われています。火山を扱うときの入口と…",
+   "url": "https://www.data.jma.go.jp/vois/data/obs/kansoku/data_index.html",
+   "license_urls": [
+    "https://www.jma.go.jp/jma/kishou/info/coment.html"
+   ]
+  },
+  {
+   "id": 83,
+   "name": "IDWR速報データ",
+   "category": "医療・健康",
+   "org": "国立健康危機管理研究機構（JIHS） 感染症情報提供サイト",
+   "summary": "感染症発生動向調査（感染症法に基づく定点把握・全数把握）に基づく週単位の速報値を、CSVで公開しているデータです。ここでちょっとクセがあって、年ごとにURLパスが変わる構造になっています。正しいパスは/sokuhou/{年}/です。ここを知らないとリンク切れに見えて焦るやつなんで…",
+   "url": "https://id-info.jihs.go.jp/surveillance/idwr/",
+   "license_urls": []
+  },
+  {
+   "id": 84,
+   "name": "新型コロナウイルス感染症オープンデータ",
+   "category": "医療・健康",
+   "org": "厚生労働省",
+   "summary": "新規陽性者数、入院治療等を要する者の数、重症者数、死亡者数、PCR検査実施人数・件数などを日次・累積で公開しているデータセットです。個人的に面白いと思うのは、雇用調整助成金や緊急小口資金等の特例貸付の実績データまで一緒に載っている点。感染状況だけでなく、政策対応の実績まで一つの窓…",
+   "url": "https://www.mhlw.go.jp/stf/covid-19/open-data.html",
+   "license_urls": [
+    "https://www.mhlw.go.jp/chosakuken/index.html"
+   ]
+  },
+  {
+   "id": 85,
+   "name": "学校基本調査",
+   "category": "統計・マクロ経済",
+   "org": "文部科学省・e-Stat",
+   "summary": "幼稚園から大学・専修学校まで、日本国内のあらゆる学校を対象に、毎年5月1日時点の学校数・在学者数・教職員数・卒業者数・進学率などを網羅的に押さえた基幹統計です。e-Stat上ではExcel、PDF、データベース形式など数万件規模のファイルが公開されていて、長期の教育動向を分析する…",
+   "url": "https://www.e-stat.go.jp/stat-search/files?toukei=00400001",
+   "license_urls": [
+    "https://www.e-stat.go.jp/terms-of-use"
+   ]
+  },
+  {
+   "id": 86,
+   "name": "学校コード",
+   "category": "統計・マクロ経済",
+   "org": "文部科学省",
+   "summary": "全国の幼稚園・認定こども園・小中高等学校・特別支援学校・専修学校・大学・短期大学・高等専門学校それぞれに、一意のコードを付与した学校マスタデータです。学校名・設置者・所在地とともに整理されていて、複数の統計調査間でデータを名寄せ・連結するときの共通キーとして使えます。地味ですが、…",
+   "url": "https://www.mext.go.jp/b_menu/toukei/mext_01087.html",
+   "license_urls": []
+  },
+  {
+   "id": 87,
+   "name": "大学ポートレート Web-API",
+   "category": "統計・マクロ経済",
+   "org": "大学改革支援・学位授与機構（NIAD-QE）",
+   "summary": "大学改革支援・学位授与機構が全国の国公立大学等から収集・公表している大学基本情報（学部・学科構成、学生数、教員数、進路状況等）を、機械判読しやすいJSON形式で提供するAPIです。2022年8月にサービス開始し、年次で更新されています。大学データをアプリに組み込みたいなら、まずこ…",
+   "url": "https://portraits.niad.ac.jp/info/-web-api.html",
+   "license_urls": [
+    "https://api-portal.portraits.niad.ac.jp/index.html",
+    "mailto:uidb@niad.ac.jp"
+   ]
+  },
+  {
+   "id": 88,
+   "name": "財務省貿易統計",
+   "category": "統計・マクロ経済",
+   "org": "財務省・税関・e-Stat",
+   "summary": "日本の輸出入について、9桁の品目コード（HSコード準拠）ごとに国・地域別の数量・金額を集計した公式貿易統計です。月次・年次のデータが継続して蓄積されていて、通関実績に基づく確定値のほか速報値も出るので、貿易動向をかなり細かい粒度で追えます。品目×相手国のクロス分析をやりたいなら、…",
+   "url": "https://www.customs.go.jp/toukei/info/tsdl.htm",
+   "license_urls": [
+    "https://www.e-stat.go.jp/terms-of-use"
+   ]
+  },
+  {
+   "id": 89,
+   "name": "国民経済計算 / GDP統計",
+   "category": "統計・マクロ経済",
+   "org": "内閣府・e-Stat",
+   "summary": "国民経済計算（SNA）は、国連の国際基準に準拠してGDP・民間最終消費支出・設備投資・輸出入などのマクロ経済指標を体系的にまとめた統計です。速報性重視の「四半期別GDP速報（QE）」、より包括的な「国民経済計算年次推計」、そして「民間企業資本ストック」の3系統で構成されていて、e…",
+   "url": "https://www.e-stat.go.jp/stat-search/files?toukei=00100409",
+   "license_urls": []
+  },
+  {
+   "id": 90,
+   "name": "景気ウォッチャー調査",
+   "category": "統計・マクロ経済",
+   "org": "内閣府",
+   "summary": "これ、個人的にかなり好きな調査なんですよね。タクシー運転手や小売店員、飲食業従事者など、地域の景気動向を肌で感じる立場の人々（ウォッチャー）へのアンケートに基づいて景況感を指数化（DI）したものです。毎月実施され、現状判断DIと先行き判断DIに加えて、回答者の生の景気判断理由コメ…",
+   "url": "https://www5.cao.go.jp/keizai3/watcher/watcher_menu.html",
+   "license_urls": []
+  },
+  {
+   "id": 91,
+   "name": "日本銀行 時系列統計データAPI",
+   "category": "統計・マクロ経済",
+   "org": "日本銀行",
+   "summary": "日本銀行の「時系列統計データ検索サイト」で提供される、金利・為替、マネーストック、企業物価指数、国際収支、短観（日銀短期経済観測調査）など多岐にわたる経済統計を、プログラムから直接取得できるAPIです。2026年2月にAPI機能の提供開始が案内され、従来のブラウザ経由でのCSV/…",
+   "url": "https://www.stat-search.boj.or.jp/",
+   "license_urls": []
+  },
+  {
+   "id": 92,
+   "name": "文化遺産オンライン検索用API",
+   "category": "文化財・研究・アーカイブ",
+   "org": "文化庁（文化遺産オンライン運営：国立情報学研究所ほか参加館）",
+   "summary": "文化遺産オンラインに登録されている、全国の博物館・美術館等が公開する文化財・美術作品などの情報を横断的に検索できるAPIです。うまくできているのは、参加館が独自にデータベースを構築しなくても、自館のホームページ等に検索・閲覧機能を組み込めるよう設計されている点。作品名・作家名・時…",
+   "url": "https://api-catalog.e-gov.go.jp/info/ja/apicatalog/view/56",
+   "license_urls": []
+  },
+  {
+   "id": 93,
+   "name": "国立公文書館デジタルアーカイブ",
+   "category": "文化財・研究・アーカイブ",
+   "org": "国立公文書館",
+   "summary": "国立公文書館が所蔵する歴史公文書・行政文書・古典籍資料などをデジタル化し、目録情報と画像を公開しているアーカイブです。詳細検索に加えて、徳島県立文書館や愛媛県歴史的公文書検索システムなど連携機関との横断検索にも対応しています。江戸時代の古文書から近現代の公文書まで、幅広い資料を無…",
+   "url": "https://www.digital.archives.go.jp/",
+   "license_urls": []
+  },
+  {
+   "id": 94,
+   "name": "国立美術館 所蔵作品総合目録",
+   "category": "文化財・研究・アーカイブ",
+   "org": "独立行政法人国立美術館",
+   "summary": "東京国立近代美術館、国立工芸館、京都国立近代美術館、国立西洋美術館、国立国際美術館の5館が所蔵する作品情報を横断的に検索できるサイトです。ここは押さえておきたいのですが、国立新美術館および国立映画アーカイブの情報は対象外です。ジャンル・作品題名・作家名・制作年代などで検索でき、著…",
+   "url": "https://search.artmuseums.go.jp/",
+   "license_urls": []
+  },
+  {
+   "id": 95,
+   "name": "国立国会図書館デジタルコレクション IIIF",
+   "category": "文化財・研究・アーカイブ",
+   "org": "国立国会図書館",
+   "summary": "国立国会図書館デジタルコレクションに収録された資料のうち、対応するものについて、IIIF（International Image Interoperability Framework）準拠のManifestや画像APIを使って、高精細画像の取得・切り出し・外部ビューアでの表示がで…",
+   "url": "https://dl.ndl.go.jp/ja/help_iiif.html",
+   "license_urls": [
+    "https://dl.ndl.go.jp/static/files/IIIF_interface_Jp.pdf"
+   ]
+  },
+  {
+   "id": 96,
+   "name": "K-NET / KiK-net 強震観測データ",
+   "category": "気象・防災・地震・地盤",
+   "org": "国立研究開発法人防災科学技術研究所",
+   "summary": "全国約1,700ヵ所に設置された強震計から得られる地震動の波形データを公開するサイトです。被害をもたらすような強い揺れを、振り切れることなく正確に記録することを目的としていて、地表設置型のK-NETと、地中・地表同時観測型のKiK-netの2つの観測網で構成されています。研究・防…",
+   "url": "https://www.kyoshin.bosai.go.jp/",
+   "license_urls": []
+  },
+  {
+   "id": 97,
+   "name": "都市計画決定GISデータ",
+   "category": "不動産・都市計画",
+   "org": "国土交通省",
+   "summary": "全国の地方公共団体が決定した用途地域・都市計画道路・公園・市街化区域/市街化調整区域などの都市計画情報を、GIS形式で公開しているページです。地方公共団体と国土交通省がとりまとめた資料をもとに整備されていて、シェープファイル・GeoJSON形式に加えてCityGML形式でも提供さ…",
+   "url": "https://www.mlit.go.jp/toshi/tosiko/toshi_tosiko_tk_000087.html",
+   "license_urls": []
+  },
+  {
+   "id": 98,
+   "name": "KuniJiban 国土地盤情報検索サイト",
+   "category": "気象・防災・地震・地盤",
+   "org": "国土交通省・国立研究開発法人土木研究所・国立研究開発法人港湾空港技術研究所",
+   "summary": "全国の地方整備局および沖縄総合事務局が保有するボーリング柱状図や土質試験結果などの地盤情報を、検索・閲覧できるサイトです。全国9つの地方整備局と沖縄総合事務局管内のデータを対象に、20万件超のボーリング柱状図が登録されています。地図から任意の地点を選んで、周辺のボーリングデータを…",
+   "url": "https://www.kunijiban.pwri.go.jp/",
+   "license_urls": []
+  },
+  {
+   "id": 99,
+   "name": "活断層データベース",
+   "category": "気象・防災・地震・地盤",
+   "org": "国立研究開発法人産業技術総合研究所 地質調査総合センター",
+   "summary": "日本全国の活断層に関する情報を集約したデータベースで、起震断層・活動セグメント、それに対応する歴史地震、調査地点、関連文献情報などを検索できます。断層の長さや平均変位速度、将来の活動確率といった防災上重要なパラメータを、ランキング表示や地図表示で確認できるほか、地下構造閲覧システ…",
+   "url": "https://gbank.gsj.jp/activefault/",
+   "license_urls": []
+  },
+  {
+   "id": 100,
+   "name": "東京都オープンデータAPI",
+   "category": "自治体オープンデータポータル",
+   "org": "東京都",
+   "summary": "ラストは自治体オープンデータの好例で締めます。東京都オープンデータカタログサイトに掲載されているデータセットの一部を、プログラムから直接取得できるAPIとして提供するサービスです。利用者登録は不要で、誰でも無料で使えます。新型コロナウイルス感染症関連データをはじめ、都政に関わる各…",
+   "url": "https://x.com/retro_maid",
+   "license_urls": []
+  }
+ ]
+}

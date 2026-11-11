@@ -1,0 +1,17 @@
+name: Check data endpoints
+
+# 外部 API の死活監視（毎週月曜 09:00 JST）。失敗すると Actions に赤く出ます。
+on:
+  schedule:
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/check-endpoints.mjs
