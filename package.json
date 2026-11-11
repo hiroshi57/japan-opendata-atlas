@@ -9,7 +9,8 @@
     "catalog": "python -I scripts/build_catalog.py",
     "snapshots": "node scripts/fetch_snapshots.mjs",
     "snapshots:py": "python -I scripts/fetch_snapshots.py",
-    "check:endpoints": "node scripts/check-endpoints.mjs"
+    "check:endpoints": "node scripts/check-endpoints.mjs",
+    "snapshots:all": "node scripts/fetch_snapshots.mjs && python -I scripts/fetch_snapshots.py && node scripts/snapshot-diff.mjs"
   },
   "type": "module",
   "dependencies": {

@@ -7,6 +7,7 @@
 import csv
 import io
 import json
+import urllib.error
 import urllib.request
 import zipfile
 from collections import Counter, defaultdict
@@ -35,8 +36,18 @@ def dms(s: str, deg_digits: int) -> float | None:
 
 
 def traffic() -> None:
-    url = "https://www.npa.go.jp/publications/statistics/koutsuu/opendata/2024/honhyo_2024.csv"
-    text = get(url).decode("cp932", errors="replace")
+    # 公開済みの最新年を自動で探す（前年 → 2 年前 → 3 年前）
+    text = url = None
+    for year in range(datetime.now().year - 1, datetime.now().year - 4, -1):
+        url = f"https://www.npa.go.jp/publications/statistics/koutsuu/opendata/{year}/honhyo_{year}.csv"
+        try:
+            text = get(url).decode("cp932", errors="replace")
+            break
+        except urllib.error.HTTPError as e:
+            if e.code != 404:
+                raise
+    if text is None:
+        raise SystemExit("交通事故 CSV が見つかりません")
     rows = csv.reader(io.StringIO(text))
     next(rows)
     years = Counter()

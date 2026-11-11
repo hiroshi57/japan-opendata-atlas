@@ -1,0 +1,49 @@
+name: Update data snapshots
+
+# 毎週月曜 03:00 JST にスナップショットを再取得。実質的な変化があるときだけ main にコミットし、サイトを再デプロイする。
+on:
+  schedule:
+    - cron: '0 18 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: update-snapshots
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Fetch snapshots
+        run: |
+          node scripts/fetch_snapshots.mjs
+          python -I scripts/fetch_snapshots.py
+      - name: Keep only meaningful changes
+        run: node scripts/snapshot-diff.mjs
+      - name: Commit and redeploy
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- data/snapshots && [ -z "$(git ls-files --others --exclude-standard data/snapshots)" ]; then
+            echo "変更なし"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/snapshots
+          git commit -m "chore: データスナップショットを自動更新"
+          git push
+          # GITHUB_TOKEN による push は他のワークフローを起動しないため、デプロイを明示的に実行する
+          gh workflow run pages.yml

@@ -20,10 +20,12 @@ npm run build      # dist/ に静的サイトを出力（相対パスなので�
 | `data/snapshots/laws_stats.json` | e-Gov 法令: 種別 × 公布年代の件数（現行法令 全件走査） | `npm run snapshots` |
 | `data/snapshots/boj_usdjpy.json` | 日本銀行: ドル円 月中平均（1973年〜） | `npm run snapshots` |
 | `data/snapshots/kkj_hits.json` | 官公需情報: 都道府県別の公示件数（工事・委託・物品） | `npm run snapshots` |
-| `data/snapshots/jp_traffic_accidents.json` | 警察庁 交通事故統計（本票 約29万件を 10km メッシュ・曜日×時間帯・月別に集計、死亡事故地点） | `npm run snapshots:py` |
+| `data/snapshots/jp_traffic_accidents.json` | 警察庁 交通事故統計（最新年の本票 約29万件を 10km メッシュ・曜日×時間帯・月別に集計、死亡事故地点） | `npm run snapshots:py` |
 | `data/snapshots/toei_gtfs.json` | 東京都交通局 GTFS（都営地下鉄・都電の路線、駅、都営バス停留所） | `npm run snapshots:py` |
 
 スナップショットは、ブラウザから直接取得できない（CORS 非対応）または巨大なデータを事前に集計して保存したものです。
+
+**自動更新**: `.github/workflows/update-snapshots.yml` が毎週月曜 03:00 JST に全スナップショットを再取得し、取得時刻以外に変化があるときだけ `main` にコミットしてサイトを再デプロイします（手動実行は Actions の *Run workflow*）。手元では `npm run snapshots:all`。交通事故データは公開済みの最新年を自動で探します。
 
 ## 可視化できる項目（24 / 100）
 
