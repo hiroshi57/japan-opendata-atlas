@@ -20,7 +20,10 @@ export function mountEgov(stage) {
       foot('e-Govデータポータル メタデータ取得API (data.e-gov.go.jp)', egov.fetched),
     ),
   );
-  return { destroy() {} };
+  return {
+    destroy() {},
+    exportData: () => ({ name: '提供組織別データセット数', source: 'e-Govデータポータル メタデータ取得API', rows: egov.items.map((i) => ({ 提供組織: i.name, データセット数: i.count })) }),
+  };
 }
 
 /* ---------- 新型コロナ 新規陽性者数（週別） ---------- */
@@ -62,7 +65,18 @@ export function mountCovid(stage) {
       foot('厚生労働省 新型コロナウイルス感染症オープンデータ', covid.fetched),
     ),
   );
-  return { destroy() {} };
+  return {
+    destroy() {},
+    exportData: () => ({
+      name: '新規陽性者数_週別',
+      source: '厚生労働省 新型コロナウイルス感染症オープンデータ（週次に集計）',
+      rows: covid.weeks.map((w, i) => {
+        const r = { 週開始日: w };
+        keys.forEach((k, j) => (r[names[j]] = covid.series[k][i]));
+        return r;
+      }),
+    }),
+  };
 }
 
 /* ---------- e-Gov 法令: 統計 + ライブ検索 ---------- */
@@ -113,12 +127,21 @@ export function mountLaws(stage) {
       foot('e-Gov法令API v2 (laws.e-gov.go.jp)', laws.fetched),
     ),
   );
-  return { destroy() {} };
+  return {
+    destroy() {},
+    exportData: () => ({
+      name: '現行法令の内訳',
+      source: 'e-Gov法令API',
+      rows: [...decades.map((d) => ({ 区分: '公布年代', 項目: d.label, 件数: d.value })), ...types.map((t) => ({ 区分: '種別', 項目: t.label, 件数: t.value }))],
+    }),
+  };
 }
 
 /* ---------- ジャパンサーチ: 文化財・作品ギャラリー ---------- */
 export function mountGallery(stage) {
   const KEYWORDS = ['浮世絵', '富士山', '土器', '着物', '古地図', '仏像', '城'];
+  let last = [];
+  let lastKw = '';
   const grid = h('div', { class: 'gallery' });
   const input = h('input', { type: 'search', value: '浮世絵', placeholder: 'キーワード' });
   const note = h('small', {});
@@ -131,6 +154,8 @@ export function mountGallery(stage) {
     try {
       const j = await fetch(`https://jpsearch.go.jp/api/item/search/jps-cross?keyword=${encodeURIComponent(q)}&size=36&from=0`).then((r) => r.json());
       const items = (j.list ?? []).filter((x) => x.common?.thumbnailUrl?.[0]);
+      lastKw = q;
+      last = items.map((x) => ({ タイトル: x.common.title, 提供機関: (x.common.contributor ?? []).join(' / '), リンク: x.common.linkUrl, サムネイル: x.common.thumbnailUrl[0] }));
       note.textContent = `「${q}」: ${nf.format(j.hit ?? 0)} 件（サムネイルのある ${items.length} 件を表示）`;
       grid.replaceChildren(
         ...items.map((x) => {
@@ -165,5 +190,8 @@ export function mountGallery(stage) {
     ),
   );
   search('浮世絵');
-  return { destroy() {} };
+  return {
+    destroy() {},
+    exportData: () => ({ name: `検索結果_${lastKw}`, source: 'ジャパンサーチ API', rows: last }),
+  };
 }

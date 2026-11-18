@@ -283,3 +283,12 @@ input[type='radio'], input[type='checkbox'], input[type='range'] { accent-color:
   .hero h1 { font-size: 24px; }
   .caption { max-width: calc(100% - 24px); }
 }
+
+/* データ書き出しメニュー */
+.dl { position: relative; }
+.dl .menu { position: absolute; top: calc(100% + 6px); right: 0; z-index: 10; display: grid; gap: 2px; min-width: 210px; padding: 6px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow); }
+.dl .menu[hidden] { display: none; }
+.dl .menu button { text-align: left; padding: 8px 10px; border: 0; border-radius: 7px; background: transparent; cursor: pointer; font-size: 13px; }
+.dl .menu button:hover { background: var(--soft); }
+.dl .menu small { padding: 4px 10px 2px; color: var(--muted); font-size: 10.5px; line-height: 1.4; }
+.dl .menu small.warn { color: #b45309; }

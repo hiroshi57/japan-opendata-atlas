@@ -6,6 +6,7 @@ import boj from '../data/snapshots/boj_usdjpy.json';
 import { VIZ, BADGE_FILTERS } from './viz/registry.js';
 import { h, nf } from './dom.js';
 import { hbar } from './charts.js';
+import { attachExport } from './export.js';
 
 const items = catalog.items;
 const byId = new Map(items.map((i) => [i.id, i]));
@@ -320,6 +321,7 @@ async function showItem(id) {
       const handle = await v.mount(stage, { item: it });
       if (token !== state.token) return handle?.destroy?.();
       state.handle = handle;
+      attachExport(handle, it, head.querySelector('.actions'));
     } catch (err) {
       console.error(err);
       stage.replaceChildren(h('div', { class: 'error' }, `ビジュアルを表示できませんでした: ${err.message}`));

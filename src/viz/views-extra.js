@@ -27,7 +27,10 @@ export function mountBoj(stage) {
       foot('日本銀行 時系列統計データ検索サイト API', boj.fetched),
     ),
   );
-  return { destroy() {} };
+  return {
+    destroy() {},
+    exportData: () => ({ name: 'ドル円_月中平均', source: `日本銀行 時系列統計データ（${boj.name}）`, rows: boj.dates.map((d, i) => ({ 年月: d, [`ドル円(${boj.unit})`]: boj.values[i] })) }),
+  };
 }
 
 /* ---------- メディア芸術データベース: 収録データの種別内訳 ---------- */
@@ -51,6 +54,7 @@ const MADB_LABEL = {
 };
 
 export function mountMediaArts(stage) {
+  let exportRows = [];
   const body = h('div', {}, h('p', { class: 'view-sub' }, 'SPARQL エンドポイントに問い合わせ中…'));
   const q = 'SELECT ?type (COUNT(*) AS ?n) WHERE {?s a ?type} GROUP BY ?type ORDER BY DESC(?n) LIMIT 16';
   fetch(`https://mediaarts-db.artmuseums.go.jp/sparql?output=json&query=${encodeURIComponent(q)}`)
@@ -60,6 +64,7 @@ export function mountMediaArts(stage) {
         const key = b.type.value.split('#').pop().split('/').pop();
         return { label: MADB_LABEL[key] ?? key, value: Number(b.n.value), sub: key };
       });
+      exportRows = rows.map((r) => ({ 種別: r.label, クラス名: r.sub, 件数: r.value }));
       body.replaceChildren(
         h('p', { class: 'view-sub' }, `上位 ${rows.length} 種別（レコード数）。マンガ・アニメ・ゲーム・メディアアートの4分野を横断するデータです。`),
         hbar(rows, { color: '#db2777' }),
@@ -74,5 +79,8 @@ export function mountMediaArts(stage) {
       h('div', { class: 'caption static' }, '出典: 文化庁 メディア芸術データベース (mediaarts-db.artmuseums.go.jp) SPARQL endpoint — ライブ取得'),
     ),
   );
-  return { destroy() {} };
+  return {
+    destroy() {},
+    exportData: () => ({ name: '収録データの種別内訳', source: '文化庁 メディア芸術データベース（SPARQL）', rows: exportRows }),
+  };
 }

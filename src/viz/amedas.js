@@ -56,7 +56,7 @@ async function series24(code, stamp, key) {
   return rows;
 }
 
-export async function setup({ map, section, card, h, caption, maplibregl }) {
+export async function setup({ map, section, card, h, caption, maplibregl, setExport }) {
   const [latest, table] = await Promise.all([
     fetch(`${BASE}/data/latest_time.txt`).then((r) => r.text()),
     fetch(`${BASE}/const/amedastable.json`).then((r) => r.json()),
@@ -85,6 +85,22 @@ export async function setup({ map, section, card, h, caption, maplibregl }) {
       },
     });
   }
+  setExport(() => ({
+    name: 'アメダス最新観測',
+    source: `気象庁 アメダス（観測時刻 ${stamp} JST）`,
+    rows: features.map((f) => ({
+      観測所コード: f.properties.code,
+      観測所名: f.properties.name,
+      経度: +f.geometry.coordinates[0].toFixed(4),
+      緯度: +f.geometry.coordinates[1].toFixed(4),
+      標高m: f.properties.alt,
+      '気温(℃)': f.properties.temp,
+      '降水量1時間(mm)': f.properties.precip,
+      '風速(m/s)': f.properties.wind,
+      '湿度(%)': f.properties.humidity,
+      '日照1時間(h)': f.properties.sun,
+    })),
+  }));
   map.addSource('amedas', { type: 'geojson', data: { type: 'FeatureCollection', features } });
   map.addLayer({
     id: 'amedas',

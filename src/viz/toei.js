@@ -4,7 +4,15 @@ import gtfs from '../../data/snapshots/toei_gtfs.json';
 
 const pts = (arr) => ({ type: 'FeatureCollection', features: arr.map(([lng, lat, name]) => ({ type: 'Feature', geometry: { type: 'Point', coordinates: [lng, lat] }, properties: { name } })) });
 
-export async function setup({ map, section, h, caption, maplibregl }) {
+export async function setup({ map, section, h, caption, maplibregl, setExport }) {
+  setExport(() => ({
+    name: '駅とバス停',
+    source: '東京都交通局 GTFS（ODPT 公開データ）',
+    rows: [
+      ...gtfs.stations.map(([lng, lat, name]) => ({ 種別: '駅', 名称: name, 経度: lng, 緯度: lat })),
+      ...gtfs.busStops.map(([lng, lat, name]) => ({ 種別: 'バス停', 名称: name, 経度: lng, 緯度: lat })),
+    ],
+  }));
   map.addSource('toei-lines', {
     type: 'geojson',
     data: { type: 'FeatureCollection', features: gtfs.lines.map((l) => ({ type: 'Feature', geometry: { type: 'LineString', coordinates: l.coords }, properties: { name: l.name, color: l.color } })) },

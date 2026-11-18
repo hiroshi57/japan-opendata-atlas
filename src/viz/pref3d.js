@@ -10,7 +10,7 @@ const RAMP = ['#eff6ff', '#bfdbfe', '#60a5fa', '#2563eb', '#1e3a8a'];
  * indicators: [{ id, label, unit, digits, load(): Promise<{ values:number[47], year:string, source:string }> }]
  * 先頭の指標を初期表示し、ラジオで切替える。
  */
-export async function setupPrefColumns({ map, section, h, caption, toast, maplibregl }, indicators) {
+export async function setupPrefColumns({ map, section, h, caption, toast, maplibregl, setExport }, indicators) {
   map.addSource('pref3d', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
   map.addLayer({
     id: 'pref3d',
@@ -41,6 +41,11 @@ export async function setupPrefColumns({ map, section, h, caption, toast, maplib
       return;
     }
     current = ind;
+    setExport(() => ({
+      name: ind.label,
+      source: res.source,
+      rows: PREF_NAMES.map((n, i) => ({ 都道府県: n, [`${ind.label}${ind.unit ?? ''}`]: res.values[i], 時点: res.year })),
+    }));
     const vals = res.values;
     const min = Math.min(...vals.filter((v) => v != null));
     const max = Math.max(...vals.filter((v) => v != null));

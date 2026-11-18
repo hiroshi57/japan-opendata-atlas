@@ -11,7 +11,7 @@ function parseCod(cod) {
 
 const fmt = (iso) => iso.slice(5, 16).replace('T', ' ').replace('-', '/');
 
-export async function setup({ map, section, h, caption, maplibregl }) {
+export async function setup({ map, section, h, caption, maplibregl, setExport }) {
   const raw = await fetch(LIST).then((r) => r.json());
   const seen = new Set();
   const quakes = [];
@@ -24,6 +24,11 @@ export async function setup({ map, section, h, caption, maplibregl }) {
     quakes.push({ ...pos, mag, maxi: q.maxi, name: q.anm, at: q.at });
   }
   quakes.sort((a, b) => (a.at < b.at ? 1 : -1));
+  setExport(() => ({
+    name: '地震情報',
+    source: '気象庁 地震情報（防災情報）',
+    rows: quakes.map((q) => ({ 発生時刻: q.at, 震央地名: q.name, マグニチュード: q.mag, 最大震度: q.maxi, 緯度: q.lat, 経度: q.lon, '深さ(km)': q.depth })),
+  }));
 
   map.addSource('quake', {
     type: 'geojson',

@@ -173,9 +173,14 @@ export async function mountGeo(stage, spec) {
   stage.append(h('div', { class: 'place' }, input, results));
   cleanups.push(() => marker?.remove());
 
+  let exporter = null;
+  const setExport = (fn) => {
+    exporter = fn;
+  };
+
   if (spec.setup) {
     try {
-      await spec.setup({ map, stage, body, section, card, h, toast, caption, maplibregl, cleanups, apply3D });
+      await spec.setup({ map, stage, body, section, card, h, toast, caption, maplibregl, cleanups, apply3D, setExport });
     } catch (err) {
       console.error('[setup]', err);
       toast(`データ取得に失敗しました: ${err.message}`);
@@ -183,6 +188,8 @@ export async function mountGeo(stage, spec) {
   }
 
   return {
+    canExport: () => !!exporter,
+    exportData: () => exporter?.(),
     destroy() {
       cleanups.forEach((fn) => fn());
       map.remove();

@@ -24,7 +24,7 @@ async function query(lng, lat) {
 
 const square = (lng, lat, dx = 0.24, dy = 0.2) => [[[lng - dx, lat - dy], [lng + dx, lat - dy], [lng + dx, lat + dy], [lng - dx, lat + dy], [lng - dx, lat - dy]]];
 
-export async function setup({ map, section, h, caption, toast, maplibregl }) {
+export async function setup({ map, section, h, caption, toast, maplibregl, setExport }) {
   map.addSource('jshis', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
   map.addLayer({
     id: 'jshis',
@@ -68,6 +68,16 @@ export async function setup({ map, section, h, caption, toast, maplibregl }) {
 
   // 47 地点を 6 並列で取得し、順次反映
   const features = [];
+  setExport(() => ({
+    name: '都道府県庁所在地の震度確率',
+    source: 'J-SHIS 地震ハザードステーション（防災科学技術研究所）',
+    rows: features.map((f) => {
+      const raw = JSON.parse(f.properties.raw);
+      const r = { 都市: f.properties.name, 経度: f.properties.lng, 緯度: f.properties.lat };
+      for (const [k, label] of LEVELS) r[`今後30年以内 ${label}の確率`] = Number(raw[k]);
+      return r;
+    }),
+  }));
   let idx = 0;
   let done = 0;
   const worker = async () => {
@@ -78,7 +88,7 @@ export async function setup({ map, section, h, caption, toast, maplibregl }) {
         features.push({
           type: 'Feature',
           geometry: { type: 'Polygon', coordinates: square(lng, lat) },
-          properties: { name, p: Number(p.T30_I55_PS), raw: JSON.stringify(p) },
+          properties: { name, lng, lat, p: Number(p.T30_I55_PS), raw: JSON.stringify(p) },
         });
       } catch {
         /* 取得失敗地点はスキップ */

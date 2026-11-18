@@ -4,13 +4,18 @@ import { esc } from '../dom.js';
 const URL_LIST = 'https://www.jma.go.jp/bosai/volcano/const/volcano_list.json';
 const FAMOUS = ['富士山', '浅間山', '御嶽山', '阿蘇山', '桜島', '有珠山', '箱根山', '霧島山(新燃岳)'];
 
-export async function setup({ map, section, h, caption, maplibregl, apply3D }) {
+export async function setup({ map, section, h, caption, maplibregl, apply3D, setExport }) {
   const list = await fetch(URL_LIST).then((r) => r.json());
   const vols = list
     .filter((v) => Array.isArray(v.latlon) && v.latlon.length >= 2)
     .map((v) => ({ code: v.code, name: v.name_jp, en: v.name_en, lat: parseFloat(v.latlon[0]), lon: parseFloat(v.latlon[1]) }))
     .filter((v) => !Number.isNaN(v.lat));
 
+  setExport(() => ({
+    name: '火山一覧',
+    source: '気象庁 火山',
+    rows: vols.map((v) => ({ 火山コード: v.code, 火山名: v.name, 英名: v.en, 緯度: v.lat, 経度: v.lon })),
+  }));
   map.addSource('volcano', {
     type: 'geojson',
     data: {

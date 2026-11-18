@@ -7,7 +7,12 @@ const WD = ['日', '月', '火', '水', '木', '金', '土'];
 
 const sq = (lng, lat, d = 0.042) => [[[lng - d, lat - d], [lng + d, lat - d], [lng + d, lat + d], [lng - d, lat + d], [lng - d, lat - d]]];
 
-export async function setup({ map, section, card, h, caption, maplibregl }) {
+export async function setup({ map, section, card, h, caption, maplibregl, setExport }) {
+  setExport(() => ({
+    name: `交通事故_10kmメッシュ_${data.year}`,
+    source: '警察庁 交通事故統計情報のオープンデータ（本票・10kmメッシュ集計）',
+    rows: data.cells.map(([lng, lat, n, d]) => ({ メッシュ中心経度: lng, メッシュ中心緯度: lat, 事故件数: n, 死者数: d })),
+  }));
   const max = data.cells[0][2];
   map.addSource('acc', {
     type: 'geojson',
