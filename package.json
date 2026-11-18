@@ -4,7 +4,7 @@
   "description": "日本のオープンデータ100選を2D/3Dで可視化するアトラス（左:項目 / 右:ビジュアル）",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && vite build --config vite.single.config.js && node scripts/inline-single.mjs",
     "preview": "vite preview",
     "catalog": "python -I scripts/build_catalog.py",
     "snapshots": "node scripts/fetch_snapshots.mjs",

@@ -85,7 +85,7 @@ function buildSidebar() {
     ),
     h('div', { class: 'side-tools' }, search, chips),
     h('nav', { id: 'list' }),
-    h('footer', { class: 'side-foot' }, '出典: ', h('a', { href: catalog.source, target: '_blank', rel: 'noopener' }, 'Qiita「日本のオープンデータ100選」'), ' (Retro-Maid)'),
+    h('footer', { class: 'side-foot' }, h('a', { href: './japan-opendata-atlas.html', download: 'japan-opendata-atlas.html', title: '1ファイルで動く HTML。ダブルクリックで開けます' }, '単一HTML版をダウンロード'), h('br'), '出典: ', h('a', { href: catalog.source, target: '_blank', rel: 'noopener' }, 'Qiita「日本のオープンデータ100選」'), ' (Retro-Maid)'),
   );
   renderList();
 }

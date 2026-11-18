@@ -10,6 +10,12 @@ npm run build      # dist/ に静的サイトを出力（相対パスなので�
 # main への push で GitHub Pages に自動デプロイ（.github/workflows/pages.yml）
 ```
 
+### 単一 HTML 版（誰でも開ける 1 ファイル）
+
+`npm run build` は通常版（`dist/index.html`）に加えて、JS・CSS・地図ワーカー・データをすべて埋め込んだ
+**`dist/japan-opendata-atlas.html`（約 2.2 MB）** も出力します。サーバー不要で、ダブルクリック（`file://`）やメール添付でも動きます
+（地図タイルとライブ API の取得にはネット接続が必要）。公開サイトの左下リンクからもダウンロードできます。
+
 ## 集約しているデータ
 
 | パス | 内容 | 更新方法 |
