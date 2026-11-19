@@ -19,6 +19,7 @@ const checks = [
   ['統計ダッシュボード', 'https://dashboard.e-stat.go.jp/api/1.0/Json/getData?Lang=JP&IndicatorCode=0201010010000020030&RegionalRank=3', 'json'],
   ['e-Gov 法令API', 'https://laws.e-gov.go.jp/api/2/laws?limit=1', 'json'],
   ['ジャパンサーチ', 'https://jpsearch.go.jp/api/item/search/jps-cross?keyword=%E5%AF%8C%E5%A3%AB&size=1', 'json'],
+  ['OSRM 経路検索（雨の日ルート診断）', 'https://router.project-osrm.org/route/v1/driving/139.7671,35.6812;139.7003,35.6896?overview=false', 'json'],
   ['メディア芸術DB SPARQL', 'https://mediaarts-db.artmuseums.go.jp/sparql?output=json&query=SELECT%20*%20WHERE%20%7B%3Fs%20%3Fp%20%3Fo%7D%20LIMIT%201', ''],
 ];
 

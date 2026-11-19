@@ -36,13 +36,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if git diff --quiet -- data/snapshots && [ -z "$(git ls-files --others --exclude-standard data/snapshots)" ]; then
+          if git diff --quiet -- data/snapshots public/accidents.bin && [ -z "$(git ls-files --others --exclude-standard data/snapshots public/accidents.bin)" ]; then
             echo "変更なし"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/snapshots
+          git add data/snapshots public/accidents.bin
           git commit -m "chore: データスナップショットを自動更新"
           git push
           # GITHUB_TOKEN による push は他のワークフローを起動しないため、デプロイを明示的に実行する

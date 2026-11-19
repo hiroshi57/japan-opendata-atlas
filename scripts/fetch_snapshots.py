@@ -7,6 +7,8 @@
 import csv
 import io
 import json
+import struct
+from array import array
 import urllib.error
 import urllib.request
 import zipfile
@@ -55,6 +57,8 @@ def traffic() -> None:
     heat = [[0] * 24 for _ in range(7)]  # [曜日(日=0..土=6)][時]
     months = [0] * 12
     fatal = []
+    # 経路診断用の軽量バイナリ（全事故の位置 + フラグ: bit0=死亡事故, bit1=雨天）
+    b_lon, b_lat, b_flag = array('i'), array('i'), array('B')
     total = deaths = injured = 0
     for r in rows:
         if len(r) < 63:
@@ -70,6 +74,9 @@ def traffic() -> None:
         except ValueError:
             continue
         total += 1
+        b_lon.append(round(lon * 1e5))
+        b_lat.append(round(lat * 1e5))
+        b_flag.append((1 if (r[4].strip() == '1' or d > 0) else 0) | (2 if r[20].strip() == '3' else 0))  # 天候 3=雨
         deaths += d
         injured += i
         key = (round(lat / 0.1), round(lon / 0.1))
@@ -96,6 +103,13 @@ def traffic() -> None:
         "fatal": fatal,
     }
     (OUT / "jp_traffic_accidents.json").write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    pub = OUT.parents[1] / "public"
+    pub.mkdir(exist_ok=True)
+    year = data["year"]
+    (pub / "accidents.bin").write_bytes(
+        struct.pack("<4sIII", b"ACC1", len(b_lon), year, 0) + b_lon.tobytes() + b_lat.tobytes() + b_flag.tobytes()
+    )
+    print("accidents.bin", len(b_lon), "rain", sum(1 for f in b_flag if f & 2), "fatal", sum(1 for f in b_flag if f & 1))
     print("traffic", total, "cells", len(cells), "fatal", len(fatal), "year", data["year"])
 
 

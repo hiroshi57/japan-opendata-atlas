@@ -83,7 +83,7 @@ function buildSidebar() {
       ),
       h('p', {}, '日本のオープンデータ100選を 2D / 3D で可視化'),
     ),
-    h('div', { class: 'side-tools' }, search, chips),
+    h('div', { class: 'side-tools' }, h('a', { class: 'tool-link', href: '#/rain' }, h('b', {}, '雨の日ルート診断'), h('small', {}, '浸水想定 × 雨天の事故で道を比べる／動画・写真も診断')), search, chips),
     h('nav', { id: 'list' }),
     h('footer', { class: 'side-foot' }, h('a', { href: './japan-opendata-atlas.html', download: 'japan-opendata-atlas.html', title: '1ファイルで動く HTML。ダブルクリックで開けます' }, '単一HTML版をダウンロード'), h('br'), '出典: ', h('a', { href: catalog.source, target: '_blank', rel: 'noopener' }, 'Qiita「日本のオープンデータ100選」'), ' (Retro-Maid)'),
   );
@@ -257,7 +257,7 @@ function showHome() {
           h('div', {}, h('b', {}, vizCount), h('small', {}, 'ビジュアル化できた項目')),
           h('div', {}, h('b', {}, items.filter((i) => VIZ[i.id]?.badges.includes('3D')).length), h('small', {}, '3D 表示に対応')),
         ),
-        h('div', { class: 'hero-cta' }, h('a', { class: 'btn', href: '#/12' }, '🏙️ PLATEAU 3D 都市モデルを見る'), h('a', { class: 'btn ghost', href: `#/${firstViz.id}` }, 'ビジュアル一覧へ')),
+        h('div', { class: 'hero-cta' }, h('a', { class: 'btn', href: '#/rain' }, '雨の日ルート診断'), h('a', { class: 'btn ghost', href: '#/12' }, 'PLATEAU 3D 都市モデル'), h('a', { class: 'btn ghost', href: `#/${firstViz.id}` }, 'ビジュアル一覧へ')),
       ),
       h(
         'div',
@@ -342,6 +342,33 @@ async function showItem(id) {
   $main.scrollTop = 0;
 }
 
+async function showRain() {
+  teardown();
+  const token = state.token;
+  state.current = null;
+  $app.classList.remove('menu-open');
+  markActive();
+  const stage = h('div', { class: 'stage' }, h('div', { class: 'loading' }, '読み込み中…'));
+  const head = h(
+    'div',
+    { class: 'head', style: '--c:#0284c7' },
+    h('div', { class: 'head-main' }, h('div', { class: 'crumb' }, 'ツール'), h('h1', {}, '雨の日ルート診断'),
+      h('div', { class: 'meta' }, h('span', {}, '浸水想定区域 × 雨天時の事故で、安全な道を比べる'), badgeEl('2D'))),
+    h('div', { class: 'actions' }),
+  );
+  $main.replaceChildren(head, stage);
+  try {
+    const { mountRain } = await import('./rain/page.js');
+    const handle = await mountRain(stage);
+    if (token !== state.token) return handle.destroy();
+    state.handle = handle;
+    attachExport(handle, { id: 'rain', name: '雨の日ルート診断', url: '' }, head.querySelector('.actions'));
+  } catch (err) {
+    console.error(err);
+    stage.replaceChildren(h('div', { class: 'error' }, `表示できませんでした: ${err.message}`));
+  }
+}
+
 function buildDetail(it, collapsible) {
   const sections = [];
   if (it.summary) sections.push(h('section', {}, h('h3', {}, '概要（冒頭の抜粋）'), h('p', {}, linkify(it.summary))));
@@ -363,6 +390,7 @@ function buildDetail(it, collapsible) {
 
 /* ---------- ルーティング ---------- */
 function route() {
+  if (/^#\/rain/.test(location.hash)) return showRain();
   const m = /^#\/(\d+)(?:\?.*)?$/.exec(location.hash);
   if (m) showItem(+m[1]);
   else showHome();
