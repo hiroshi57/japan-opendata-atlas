@@ -347,3 +347,28 @@ input[type='radio'], input[type='checkbox'], input[type='range'] { accent-color:
   .rain-side { border-right: 0; }
 }
 .r-verdict p.warn { padding: 8px 10px; border-radius: 8px; background: #fef3c7; color: #78350f; border: 1px solid #fde68a; font-size: 12px; }
+
+/* ---- 雨の日ルート診断: タブ・ステップ・バナー ---- */
+.r-banner { position: sticky; top: 0; z-index: 6; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin: 0 -16px; padding: 10px 16px; background: var(--soft); border-bottom: 1px solid var(--line); font-size: 12.5px; line-height: 1.5; }
+.r-banner.act { background: #fef3c7; border-bottom-color: #f59e0b; color: #78350f; }
+.r-banner > span { flex: 1; min-width: 160px; }
+.r-stepno { display: inline-grid; place-items: center; min-width: 22px; height: 22px; margin-right: 6px; border-radius: 50%; background: var(--brand-ink); color: #fff; font-size: 12px; font-weight: 700; }
+.r-banner .r-stepno { margin-right: 0; }
+.r-stepno.done { background: #16a34a; }
+.mini.primary { background: var(--brand-ink); color: #fff; border-color: var(--brand-ink); }
+.r-tabs { display: grid; grid-template-columns: 1fr 1fr; margin: 12px 0 4px; border-bottom: 2px solid var(--line); }
+.r-tab { padding: 10px 6px; border: 0; background: transparent; font-size: 13px; font-weight: 700; color: var(--muted); cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; }
+.r-tab.on { color: var(--ink); border-bottom-color: var(--brand-ink); }
+.r-pane[hidden] { display: none; }
+.r-step h3 { display: flex; align-items: center; }
+.r-stepinfo { margin-top: 6px; color: var(--ink-2); font-size: 12px; }
+.r-need-card, .r-card { margin: 8px 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel-2); }
+.r-need-head { display: flex; gap: 10px; align-items: center; } .r-need-head img { width: 64px; height: 48px; object-fit: cover; border-radius: 6px; } .r-need-head small { display: block; color: var(--muted); }
+.r-note.ok { color: #166534; } .r-note.err { color: #dc2626; }
+.photo-card { display: grid; grid-template-columns: 96px 1fr; gap: 10px; cursor: pointer; } .photo-card img { width: 96px; height: 72px; object-fit: cover; border-radius: 6px; }
+.photo-card p { margin: 4px 0; line-height: 1.55; } .photo-card small { color: var(--muted); }
+.r-level { display: inline-block; margin: 6px 0 2px; padding: 3px 9px; border-radius: 6px; font-weight: 700; font-size: 12.5px; }
+.r-level.ok { background: #dcfce7; color: #166534; } .r-level.mid { background: #fef3c7; color: #92400e; } .r-level.high { background: #fee2e2; color: #991b1b; }
+.r-sum p { margin: 3px 0; line-height: 1.55; } .r-sum small { color: var(--muted); }
+.r-need .place-results { margin: 4px 0 8px; }
+.pin.photo { cursor: grab; }

@@ -254,3 +254,23 @@ export function verdict(routes, mode) {
   }
   return { title, lines, best, notes };
 }
+
+/** 写真（1地点）の診断文。risk = { flood: 深さクラス, around: [{radius, all, rain, fatal}×3] }。level: 0=懸念少なめ / 1=やや注意 / 2=要注意 */
+export function photoVerdict(risk) {
+  const f = risk.flood;
+  const a100 = risk.around[1];
+  const level = f >= 3 || a100.all >= 5 ? 2 : f >= 1 || a100.all >= 2 ? 1 : 0;
+  const title = ['この場所に大きな懸念は少なめです', 'やや注意が必要な場所です', '大雨のとき、特に注意が必要な場所です'][level];
+  const lines = [
+    f ? `洪水の浸水想定区域の内側です（想定される浸水の深さ: ${FLOOD_LEGEND[f - 1].label}）。` : '洪水の浸水想定区域（想定最大規模）の外です。',
+    a100.all
+      ? `100m以内で ${a100.all} 件の事故が記録されています（うち雨天 ${a100.rain} 件、死亡事故 ${a100.fatal} 件）。`
+      : '100m以内の事故記録はありません。',
+    [
+      '想定外の冠水や局地的な大雨はあり得ます。最新の気象・道路情報も確認してください。',
+      '大雨のときは、冠水や見通しの悪化に注意してください。',
+      '大雨の予報があるときは、この付近を通る・停まる予定を避けるか、早めに通過・退避してください。',
+    ][level],
+  ];
+  return { level, title, lines };
+}
